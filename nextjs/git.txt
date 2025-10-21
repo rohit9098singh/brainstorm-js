@@ -1,0 +1,71 @@
+Basic
+
+Git kya hai?
+  → Git ek distributed version control system hai jo code ke changes track karta hai aur collaboration easy banata hai.
+
+Version Control System (VCS) ke types?
+  → 2 types hote hain:
+   Centralized (CVCS) → ek central server hota hai (e.g., SVN).
+   Distributed (DVCS) → har developer ke paas full repo hota hai (e.g., Git).
+
+Git vs GitHub?
+  → Git ek tool hai (local changes ke liye), GitHub ek remote hosting platform hai (collaboration ke liye).
+
+git init vs git clone?
+
+  git init → naya repo banata hai.
+
+  git clone → existing remote repo ka copy banata hai.
+
+Working dir, staging area, repo?
+
+Working dir → aapka code.
+
+Staging → jo commit ke liye ready hai.
+
+Repo → commits ka collection.
+
+git add?
+→ File ko staging area me dalta hai.
+
+git commit vs git push?
+
+  git commit → local repo me save.
+
+  git push → remote repo me bhejna.
+
+git status?
+   → Changes ki current state dikhata hai.
+
+.gitignore?
+   → Aisi files list karta hai jo Git ignore karega (e.g., node_modules).
+
+Remote repo link command?
+
+  git remote add origin <repo-url>
+
+Intermediate
+
+git pull vs git fetch?
+
+  git fetch → remote se changes download karta hai (apply nahi).
+
+  git pull → fetch + merge dono karta hai.
+
+Branch kya hai?
+   → Ek separate line of development.
+
+git branch new-branch   # create
+git checkout new-branch # switch
+
+
+merge vs rebase?
+
+  Merge → history intact, ek naya merge commit.
+
+  Rebase → history linear bana deta hai.
+
+git log?
+→ Commit history dikhata hai.
+Common flags → --oneline, --graph, --decorate.
+

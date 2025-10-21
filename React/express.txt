@@ -1,0 +1,54 @@
+1) what is express ?
+
+ Express ek lightweight aur flexible Node.js framework hai jo HTTP requests handle karne ke liye use hota hai.
+ Ye frontend aur backend ke beech communication simplify karta hai, routing provide karta hai,
+ aur APIs ya web applications banana easy banata hai
+
+===================================================================================================================================================      
+
+ 2️⃣ What is middleware in Express?
+ Middleware is a function that runs between the request and response.
+
+ Types of middleware?
+ Application-level middleware – app.use() for logging, authentication.
+
+  Router-level middleware – middleware specific to routes.
+
+  Built-in middleware – e.g. express.json(), express.static().
+
+  Error-handling middleware – (err, req, res, next) signature
+
+===================================================================================================================================================      
+
+4️⃣ What is the difference between app.use() and app.get()/app.post()?
+1) app.use() → for middleware
+2) app.get() / app.post() → for specific HTTP method routes.
+===================================================================================================================================================      
+
+6️⃣  How do you secure an Express app?
+Use Helmet.js → sets security headers.
+✅ Use CORS properly → restrict allowed origins.
+✅ Use rate limiting → prevent brute-force attacks.
+✅ Always run on HTTPS.
+
+5) CRUD stands for Create, Read, Update, Delete — the four basic operations for managing data in most applications.
+
+Create – Add new data to the database (e.g., user signup).
+
+Read – Fetch or view data (e.g., view user profile).
+
+Update – Modify existing data (e.g., edit profile info).
+
+Delete – Remove data (e.g., delete account).
+
+✅ Bonus point: “CRUD is the foundation of REST APIs and is used in almost every web or mobile app.”
+
+In an Express + MongoDB API, I would create routes like:
+
+POST /users → to create a user
+
+GET /users → to fetch all users
+
+PUT /users/:id → to update user info
+
+DELETE /users/:id → to delete a user

@@ -1,0 +1,9 @@
+For Book Kart, I built a full-stack web application using the MERN stack with Next.js for a modern and responsive user experience.
+
+On the frontend, I used Next.js for routing and SSR, Redux Toolkit with RTK Query for efficient state and API management, and Tailwind CSS for a clean, responsive UI.
+
+On the backend, I developed secure REST APIs with Node.js and Express.js, and used MongoDB as the database for managing users, books, and orders.
+
+For authentication, I implemented JWT with email verification, along with secure APIs for features like cart, wishlist, and product management.
+
+So overall, my stack is Next.js, Redux Toolkit (RTK Query), Tailwind CSS, Node.js, Express.js, MongoDB, and JWT.”

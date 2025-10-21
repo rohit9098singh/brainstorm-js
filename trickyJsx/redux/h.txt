@@ -1,0 +1,82 @@
+1. Look at your counterSlice
+const counterSlice = createSlice({
+  name: "counter",
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) => { state.value += 1 },
+    decrement: (state) => { state.value -= 1 },
+  },
+});
+
+export const { increment, decrement } = counterSlice.actions;
+
+Here, increment and decrement are Redux actions.
+
+Why? Because createSlice automatically generates action creators with the type:
+
+The <dl> tag is an HTML element used to create a description list
+<dl>
+  <dt>HTML</dt>
+  <dd>HyperText Markup Language</dd>
+
+  <dt>CSS</dt>
+  <dd>Cascading Style Sheets</dd>
+
+  <dt>JS</dt>
+  <dd>JavaScript, a programming language for the web</dd>
+</dl>
+
+
+1. What is CORS?
+
+CORS = Cross-Origin Resource Sharing
+
+Browsers enforce a same-origin policy for security.
+
+Same-origin policy: A web page can only make requests to the same domain, protocol, and port it was loaded from.
+
+Problem:
+
+If your frontend (http://localhost:3000) tries to fetch data from another API (http://api.example.com), the browser blocks it by default.
+
+This is where CORS comes in: the server can allow specific origins to access its resources.
+
+2. How CORS Works
+
+Browser sends a request with an Origin header.
+
+Server checks the origin and responds with Access-Control-Allow-Origin.
+
+If the origin is allowed → browser allows the response.
+
+If not allowed → browser blocks the response → CORS error.
+
+
+2. MPA (Multi-Page Application)
+Definition
+
+A Multi-Page Application (MPA) consists of multiple HTML pages, each loaded from the server on navigation.
+
+Each page request triggers a full page reload.
+
+Example
+
+Amazon, Wikipedia, traditional websites.
+
+
+Breakdown (jo tum bold kar ke yaad rakh sakte ho)
+
+Store = single source of truth for app state.
+
+Middleware = function that sits between dispatch and reducer.
+
+Purpose = intercept actions → logging, async calls, side effects.
+
+Example = redux-thunk, redux-saga, redux-logger.
+
+Your usage = e.g., "I used thunk middleware to handle API calls in my app so that async logic was separated from UI components."
+In Redux, the store is the central place where the entire application state is kept. It’s immutable and can only
+ be updated using actions and reducers. Middleware in Redux sits between dispatching an action and the moment it 
+ reaches the reducer. It allows us to intercept actions, add custom logic like logging, API calls, authentication
+  checks, or even modify actions before they hit the reducer. Common examples are redux-thunk for async logic and 
+  redux-logger for debugging. In my projects, I have used middleware for handling API requests and logging state changes.

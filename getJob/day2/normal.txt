@@ -1,0 +1,49 @@
+1) How do you make an image responsive without using CSS frameworks?
+  ans. Use max-width and height: auto  Using object-fit for cropping/covering
+
+2)  What’s the difference between inline, block, and inline-block elements? 
+
+     Inline elements line ke andar hi rehte hain, matlab ye horizontally flow karte hain.
+     Height & Width set nahi kar sakte directly.
+     Examples: <span>, <a>, <strong>
+
+     Block elements nayi line pe start hote hain aur full width le lete hain.
+     Height & Width set kar sakte ho.
+     Examples: <div>, <p>, <h1>
+
+     nline-block elements inline ki tarah horizontally flow karte hain
+     Lekin block ki tarah height & width set kar sakte hain
+     Examples: <img>, <button>
+
+3) How do you make a website mobile-friendly and accessible?     
+    
+  a) Use responsive layouts
+   Use CSS Flexbox or Grid to create flexible layouts.
+   Avoid fixed widths/heights; use %, vw, vh, or rem instead.
+
+  b) Use media queries
+  c) ARIA attributes
+
+4)Explain lazy loading images/components in React.
+
+  a) <img src="big-image.jpg" alt="Sample" loading="lazy" />
+
+  b)import React, { Suspense } from "react";
+   const Profile = React.lazy(() => import("./Profile"));
+
+    export default function App() {
+      return (
+        <div>
+          <h1>Homepage</h1>
+          <Suspense fallback={<p>Loading profile...</p>}>
+            <Profile />
+          </Suspense>
+        </div>
+      );
+    }
+
+5) Page loading slowly — steps to debug & optimize    
+
+   a) Use loading="lazy" for images below the fold,Use a CDN for static assets.
+   b)Code splitting & lazy loading
+   c)Avoid unnecessary re-renders (proper keys, memoization),Virtualize long lists

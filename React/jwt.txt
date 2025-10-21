@@ -1,0 +1,73 @@
+1) How do you make JWT secure?
+
+👉 Answer: Use HTTPS: Always send JWT over HTTPS so attackers can’t sniff the token.
+
+            Strong Secret Key: Use a strong, unpredictable secret key for signing.
+
+            Short Expiry Time: Keep access tokens short-lived (e.g., 15–30 min) to reduce risk if leaked.
+
+            Use Refresh Tokens: Issue a refresh token for getting new access tokens without forcing the user to log in again.
+
+            Safe Storage: Store JWT in HTTP-only cookies instead of localStorage to protect from XSS attack.
+
+===================================================================================================================================================      
+2)Is it safe to store JWT in localStorage?
+👉 Answer: ❌ Not safe. LocalStorage is accessible to JavaScript, so if an XSS attack happens, the attacker can steal it.
+
+            ✅ Better option: Store JWT in HTTP-only secure cookies (they can’t be accessed via JavaScript).
+
+===================================================================================================================================================      
+3)What information should NOT be stored in JWT?
+👉 Answer:  Never store sensitive data (passwords, bank info, Aadhaar number, etc.) in JWT because it’s Base64 encoded, not encrypted — anyone decode it.
+
+            Only store non-sensitive info like user ID, email, or role (admin/user)
+
+===================================================================================================================================================      
+
+4)How do you refresh JWT when it expires?
+👉 Answer:  Use short-lived access tokens (e.g., 15 mins).
+
+            Use longer-lived refresh tokens (e.g., 7 days).
+
+            When the access token expires, the frontend sends the refresh token to the server, which verifies it and issues a new access token.
+
+===================================================================================================================================================      
+ 5)What security measures would you add with JWT?
+👉 Answer:Send JWT only over HTTPS so no one can “see” or steal it while it’s traveling over the internet.
+          Use Refresh Tokens –👉 Give short‑lived JWTs + a refresh token to get new ones safely.Store JWT safely –
+        👉 If you store in browser → use HttpOnly cookies (JavaScript can’t read them) to protect from XSS attacks.
+          Don’t put too much info inside JWT. Only include what’s necessary (like user ID).
+
+===================================================================================================================================================      
+6)What do you do if a JWT is compromised?
+👉 Answer:  Immediately rotate the secret key (issue a new key).
+
+            Invalidate all existing tokens (blacklist/expire).
+
+              Force all users to log in again.
+===================================================================================================================================================      
+Explain the parts of a JWT (header, payload, signature).
+👉 Answer:
+
+Header: Contains the token type (JWT) and algorithm (e.g., HS256).
+
+Payload: Stores user info (userID, role, expiry time).
+
+Signature: Hashed with a secret key to ensure the token hasn’t been tampered with.
+
+===================================================================================================================================
+In short (most common RESTful API design):
+GET → JSON (200 OK)
+
+POST → JSON (201 Created)
+
+PUT → JSON (200 OK or 204 No Content)
+
+PATCH → JSON (200 OK)
+
+DELETE → 204 No Content or success message JSON
+
+
+setTimeout → Executes a function once after a specified delay (in milliseconds).
+
+setInterval → Executes a function repeatedly at a specified time interval

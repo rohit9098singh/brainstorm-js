@@ -1,0 +1,8 @@
+Definition: Access Token & Refresh Token Flow
+
+Jab user login karta hai, backend do tokens generate karta hai:
+Access Token (short-lived) aur Refresh Token (long-lived).
+Access token ka kaam hai har API request ko authenticate karna, lekin iska expiry short hota hai taaki security बनी रहे.
+Refresh token ka expiry zyada hota hai, taaki access token expire hone par user ko baar-baar login na karna pade.
+Jab access token expire hota hai, client refresh token ke zariye naya access token banata hai.
+Agar refresh token bhi missing ya expired hai, iska matlab user authenticated nahi hai, aur usse login page par redirect kiya jaana chahiye.

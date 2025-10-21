@@ -1,0 +1,92 @@
+Perfect 👍 mai tumhe **CORS interview ke important Qs (1,2,3,4,5,6,8,9)** ke answers **simple Hinglish** me deta hoon taaki tum directly interview me confidently bol sako 🚀
+
+---
+
+## **1. CORS hota kya hai?**
+
+CORS ka full form hai **Cross-Origin Resource Sharing**.
+Browser ke andar ek rule hota hai **Same-Origin Policy**, jo kehta hai ki ek domain se load hua page dusre domain ki API/data ko directly access nahi kar sakta (security ke liye).
+CORS ek mechanism hai jisme server specific headers bhejta hai aur bolta hai → “haan, is origin ko mera data access karne do.”
+
+---
+
+## **2. Example (localhost 3000 vs 5000)**
+
+Agar tumhara React frontend `http://localhost:3000` pe hai aur backend Express `http://localhost:5000` pe hai → ye **different ports** hai → iska matlab **different origin** hai.
+Jab tum frontend se API call karte ho, browser bolta hai “same-origin policy ke hisaab se ye dusra origin hai, mujhe server se permission chahiye.”
+Agar server ne CORS headers nahi bheje, to **CORS error** dikh jaata hai browser me.
+
+---
+
+## **3. Preflight Request (OPTIONS)**
+Kabhi–kabhi browser actual request bhejne se pehle ek OPTIONS request bhejta hai (isko preflight request bolte hain).
+
+Browser server se poochta hai:
+“Main yeh method (PUT/DELETE) aur yeh headers use karke request bhejna chahta hoon, allowed hai kya?”
+
+Agar server apne response me proper CORS headers bhej de:
+
+Access-Control-Allow-Methods
+
+Access-Control-Allow-Headers
+
+Access-Control-Allow-Origin
+
+Toh iska matlab hai server “haan” bol raha hai.
+Uske baad browser actual request bhejta hai.
+
+Agar server allow na kare toh browser request ko block kar deta hai (CORS error).
+
+---
+
+## **4. Important Headers in CORS**
+
+* **Access-Control-Allow-Origin** → kaunse origin ko allow karna hai (e.g. `http://localhost:3000`).
+* **Access-Control-Allow-Methods** → kaunse HTTP methods allow hain (GET, POST, PUT, DELETE).
+* **Access-Control-Allow-Headers** → kaunse custom headers client bhej sakta hai (e.g. Authorization, Content-Type).
+* **Access-Control-Allow-Credentials** → agar true hai to cookies/session/Authorization headers bhejna allowed hai.
+
+---
+
+## **5. Wildcard Trap**
+
+Agar tum `Access-Control-Allow-Origin: *` laga doge, iska matlab hai **koi bhi domain access kar sakta hai**.
+Lekin agar tum credentials (cookies, tokens, sessions) bhejna chahte ho to `*` allowed nahi hai → us case me tumhe specific domain likhna padta hai.
+
+---
+
+## **6. Server-Side Fix (Express.js)**
+
+Express me simple fix hai:
+
+```js
+const cors = require("cors");
+app.use(cors({ origin: "http://localhost:3000" }));
+```
+
+Ye sirf `http://localhost:3000` se requests allow karega.
+
+Agar tum bas `app.use(cors())` likh do → iska matlab hai server sabko allow karega (`Access-Control-Allow-Origin: *`). Ye development ke liye sahi hai, lekin production me security risk hai.
+
+---
+
+## **8. CORS vs JSONP**
+
+CORS ke aane se pehle log **JSONP** use karte the cross-origin requests ke liye. JSONP sirf **GET requests** support karta tha (kyunki `<script>` tag ke through kaam karta tha).
+Isme security issues bhi hote the (XSS attacks).
+CORS zyada powerful hai kyunki wo **GET, POST, PUT, DELETE sab methods** ke liye kaam karta hai aur controlled access deta hai.
+
+---
+
+## **9. Postman vs Browser**
+
+Jab tum Postman se API call karte ho → Postman **Same-Origin Policy** enforce nahi karta, isliye request chali jaati hai.
+Lekin browser me SOP apply hota hai → aur agar server ne CORS headers nahi bheje to error aata hai.
+Isliye “Postman me chal raha hai, par browser me CORS error aaraha hai” ek common problem hai.
+
+---
+
+👉 Ye answers tum Hinglish me confidently bol sakte ho, aur interviewer ko lagega ki tumhe **CORS ka depth** samajh aata hai.
+
+Chahte ho mai tumhe iska **ek 2–3 line ka crisp version** bhi bana du jo tum interview me ekdum short aur impactful way me bol sako?
+

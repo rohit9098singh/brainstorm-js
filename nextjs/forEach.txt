@@ -1,0 +1,38 @@
+Return value
+
+    forEach() → kuch return nahi karta (undefined deta hai).
+
+    map() → ek naya array return karta hai jisme modified values hoti hain.
+
+Use case
+
+    forEach() → jab sirf array iterate karna hai aur side-effects (console.log, DB update, etc.) perform karne hain.
+
+    map() → jab ek array se dusra transformed array banana hai.
+
+Chaining
+
+    forEach() → chaining possible nahi (kyunki return value undefined hai).
+
+    map() → chaining possible hai (kyunki naya array return hota hai).
+
+Performance
+
+    Dono ki performance lagbhag same hai, but map() thoda efficient hota hai jab tumhe naya array hi banana ho.
+
+    const arr = [1, 2, 3];
+
+// forEach
+arr.forEach(num => console.log(num * 2)); 
+// Output: 2, 4, 6
+// (kuch return nahi hota)
+
+// map
+const doubled = arr.map(num => num * 2);
+console.log(doubled);
+// Output: [2, 4, 6]
+
+
+in React, a ref is like a special object that gives you a way to directly access or store a value that React doesn’t control through state. 
+
+A custom hook in React is just a normal JavaScript function whose name starts with use, and it allows you to reuse stateful logic across multiple components.

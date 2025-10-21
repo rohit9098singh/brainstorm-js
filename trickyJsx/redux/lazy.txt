@@ -1,0 +1,26 @@
+1. Lazy Loading of Images
+Definition
+Lazy loading is a technique where images (or other resources) are loaded only when they are about to enter the viewport, instead of loading all at once on page load.
+Improves performance and reduces initial load time.
+
+<img src="large-image.jpg" alt="Lazy Image" loading="lazy">
+
+
+2. Lazy Loading of Components (React)
+Definition
+
+In React, lazy loading components means loading a component only when it’s needed (e.g., on a specific route or on user interaction).
+import React, { Suspense } from "react";
+
+const About = React.lazy(() => import("./About"));
+
+function App() {
+  return (
+    <div>
+      <h1>My App</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <About />
+      </Suspense>
+    </div>
+  );
+}

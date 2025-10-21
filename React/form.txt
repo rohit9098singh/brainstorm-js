@@ -1,0 +1,45 @@
+1️⃣ How do you manage form state in React?
+👉 Answer:You can manage form state in two main ways:
+
+            Controlled Components: The input value comes from React state (useState) and changes with onChange.
+
+            Uncontrolled Components: Use ref to directly access DOM values.
+
+            👉 Follow-up: Controlled is more common because you can validate and update state easily.
+
+===================================================================================================================================================      
+2️⃣ How do you validate form inputs in React?
+
+    Basic validation: Use onChange or onBlur events and check conditions (e.g., email format, password length).
+
+    Advanced validation: Use libraries like Formik or React Hook Form with Yup for schema-based validation.
+
+    Add real-time validation or on-submit validation based on requirements.
+
+===================================================================================================================================================      
+
+5️⃣  How do you handle multiple inputs in one form?
+👉 Answer:  1.  Use a single state object
+                const [form, setForm] = useState({ name: '', email: '' });
+            2. Update dynamically with:    
+               setForm({ ...form, [e.target.name]: e.target.value });
+
+===================================================================================================================================================      
+
+7️⃣ How do you reset a form after submission?
+   Controlled form → Reset state to initial values:
+   setForm({ name: '', email: '' });
+
+===================================================================================================================================================
+
+8️⃣ How would you handle form validation errors in real-time (live validation)?
+👉 Answer:Use onChange or onBlur events to check validity and show error messages as the user types.
+
+===================================================================================================================================================
+
+9️⃣ Have you worked with any React form libraries? Why?
+"Yes, I’ve used React Hook Form because it’s lightweight, supports validation, and integrates with Yup for schema validation."
+
+===================================================================================================================================================
+
+What are common accessibility considerations for forms? (e.g., using <label> with htmlFor)

@@ -1,0 +1,21 @@
+Problems with Context API (jab app bada ho jaata hai):
+
+Performance issues:
+Agar context ka data frequently update hota hai (jaise cart items, API data), to har consumer component re-render hota hai.
+Isse app slow ho jata hai.
+No structure / boilerplate
+Context me bas data pass hota hai, lekin koi strict structure nahi hai ki state kaise update hogi.
+
+Bade project me tracking aur debugging mushkil ho jaata hai.
+
+Debugging tools ka lack
+
+Redux ke paas Redux DevTools hai, jisme tu har state change dekh sakta hai (kis action ki wajah se kya update hua).
+
+Context API me aisa kuch nahi hai.
+
+Redux introduce hua because it provides:
+Single centralized store (poore app ka data ek jagah).
+Predictable state changes (reducers + actions).
+Time-travel debugging (state history dekh sakte ho).
+Performance optimization (only affected parts re-render).
