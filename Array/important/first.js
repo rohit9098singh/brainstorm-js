@@ -50,22 +50,22 @@
 // Input: ["i","love","coding","i","love","js"], k = 2
 // Output: ["i","love"]
 
-function topFrequentWords(words, k) {
-    // Step 1: Count frequency
-    let seen = {};
-    for (let word of words) {
-        seen[word] = (seen[word] || 0) + 1;
-    }
+// function topFrequentWords(words, k) {
+//     // Step 1: Count frequency
+//     let seen = {};
+//     for (let word of words) {
+//         seen[word] = (seen[word] || 0) + 1;
+//     }
 
-    // Step 2: Convert to array and sort by frequency descending
-    let sortedWords = Object.keys(seen).sort((a, b) => seen[b] - seen[a]);
-    console.log("check for the values what is getting here",sortedWords)
+//     // Step 2: Convert to array and sort by frequency descending
+//     let sortedWords = Object.keys(seen).sort((a, b) => seen[b] - seen[a]);
+//     console.log("check for the values what is getting here",sortedWords)
 
-    // Step 3: Return top k words
-    return sortedWords.slice(0, k);
-}
+//     // Step 3: Return top k words
+//     return sortedWords.slice(0, k);
+// }
 
-console.log(topFrequentWords(["i","love","coding","i","love","js"], 2));
+// console.log(topFrequentWords(["i","love","coding","i","love","js"], 2));
 // Output: ["i", "love"]
 
 
@@ -74,3 +74,20 @@ console.log(topFrequentWords(["i","love","coding","i","love","js"], 2));
 // Input: [2, 3, -2, 4]
 // Contiguous subarrays: [2], [3], [2,3], [3,-2], [2,3,-2], [4], [ -2,4]
 // Output: 6
+
+function maxProduct(nums) {
+  let max = nums[0];
+  
+  for (let i = 0; i < nums.length; i++) {
+    let product = 1;
+    for (let j = i; j < nums.length; j++) {
+      product *= nums[j];
+      console.log("check for the products",product)
+      max = Math.max(max, product);
+    }
+  }
+
+  return max;
+}
+
+console.log(maxProduct([2, 3, -2, 4])); // Output: 6
