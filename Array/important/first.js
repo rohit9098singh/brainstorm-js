@@ -69,25 +69,37 @@
 // Output: ["i", "love"]
 
 
+// Input: nums = [1, 2, 3, 4, 5, 6, 7], k = 3
+// Output: [5, 6, 7, 1, 2, 3, 4]
 
-// we have a given aray you need to make a combiantion of array that cann be made from it and then find whose product is largest
-// Input: [2, 3, -2, 4]
-// Contiguous subarrays: [2], [3], [2,3], [3,-2], [2,3,-2], [4], [ -2,4]
-// Output: 6
 
-function maxProduct(nums) {
-  let max = nums[0];
-  
-  for (let i = 0; i < nums.length; i++) {
-    let product = 1;
-    for (let j = i; j < nums.length; j++) {
-      product *= nums[j];
-      console.log("check for the products",product)
-      max = Math.max(max, product);
-    }
-  }
-
-  return max;
+function rotateWithSome(arr, key) {
+    let res = [];
+    let noOfItemsToRotate = key % arr.length;
+    let toRotateValue = arr.slice(-noOfItemsToRotate)
+    let initialValue = arr.slice(0, -noOfItemsToRotate)
+    res.push(...toRotateValue,...initialValue)
+    return res
 }
 
-console.log(maxProduct([2, 3, -2, 4])); // Output: 6
+console.log(rotateWithSome([1, 2, 3, 4, 5, 6, 7], k = 3))
+
+
+// Input: [2, 1, 2, 4, 3]
+// Output: [4, 2, 4, -1, -1]
+
+function nextGreaterNumber(arr){
+   let next=-Infinity;
+   let result=[];
+   for(let i=0;i<arr.length;i++){
+    for(let j=i+1;j<arr.length;j++){
+         if(arr[j] > arr[i]){
+            next=arr[j];
+            break;
+         }
+    }
+    result.push(next)
+   }
+}
+
+console.log("the resultant value of that is ",nextGreaterNumber([2, 1, 2, 4, 3]))
