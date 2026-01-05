@@ -1,11 +1,11 @@
-const fibonacci=function fib(n){
-    if(n==0 || n==1){
-        return 1
-    }
-    else{
-        return fib(n-1) + fib(n-2);
-    }
-}
+// const fibonacci=function fib(n){
+//     if(n==0 || n==1){
+//         return 1
+//     }
+//     else{
+//         return fib(n-1) + fib(n-2);
+//     }
+// }
 
 
 let num=10;
@@ -26,3 +26,18 @@ const factorial=function fact(n){
 
 // Example
 console.log(factorial(5)); // Output: 120
+
+
+const fibonacci=function fib(n){
+  if(n===0 || n===1){
+        return 1 
+  }
+  else{
+   return  fib(n-1) + fib(n-2)
+  }
+}
+
+let num2=10;
+for(let i=0;i<num2;i++){
+  console.log(fibonacci(i))
+}

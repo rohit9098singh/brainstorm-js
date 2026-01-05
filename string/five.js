@@ -39,3 +39,4 @@ function firstNonRepeating(str) {
 console.log(firstNonRepeating("swiss")); 
 
 
+

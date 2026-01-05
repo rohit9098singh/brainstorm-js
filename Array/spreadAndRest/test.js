@@ -65,13 +65,7 @@ console.log(copy)
 // If you are building a function mergeAndRemoveDuplicates(...arrays) that takes multiple arrays 
 // and returns a new array with unique elements, how would you use spread/rest to solve it?
 
-function mergeAndRemoveDuplicates(...arr){
-    const merged=[].concat(...arr);
-    
-    const unique=[...new Set(merged)];
-    return unique
-}
-console.log(mergeAndRemoveDuplicates([1,2,3], [2,3,4], [5]));
+ 
 
 
 // let arr = [3, 1, 2];
@@ -95,7 +89,7 @@ var x = 23;
   var x = 43;
   (function random() {
     x++;
-    console.log(x);
+    console.log("check your ",x);
     var x = 21;
   })();
 })();

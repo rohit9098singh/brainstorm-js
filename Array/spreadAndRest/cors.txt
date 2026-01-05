@@ -5,11 +5,11 @@ Perfect 👍 mai tumhe **CORS interview ke important Qs (1,2,3,4,5,6,8,9)** ke a
 ## **1. CORS hota kya hai?**
 
 CORS ka full form hai **Cross-Origin Resource Sharing**.
-Browser ke andar ek rule hota hai **Same-Origin Policy**, jo kehta hai ki ek domain se load hua page dusre domain ki API/data ko directly access nahi kar sakta (security ke liye).
+Browser ke andar ek rule hota hai **Same-Origin Policy**, jo kehta hai ki ek domain se load hua page dusre 
+domain ki API/data ko directly access nahi kar sakta (security ke liye).
 CORS ek mechanism hai jisme server specific headers bhejta hai aur bolta hai → “haan, is origin ko mera data access karne do.”
 
 ---
-
 ## **2. Example (localhost 3000 vs 5000)**
 
 Agar tumhara React frontend `http://localhost:3000` pe hai aur backend Express `http://localhost:5000` pe hai → ye **different ports** hai → iska matlab **different origin** hai.

@@ -10,3 +10,28 @@ function sixthFunction(arr){
     return oldest
 }
 console.log(sixthFunction(people))
+
+
+
+function outer() {
+  let count = 0;
+
+  function increment() {
+    count++;
+    return count;
+  }
+
+  function logCount() {
+    console.log("Current count:", count);
+  }
+
+  return function inner() {
+    increment();   // remembers outer function
+    logCount();    // remembers outer function
+  };
+}
+
+const fn = outer();
+
+fn(); // Current count: 1
+fn(); // Current count: 2

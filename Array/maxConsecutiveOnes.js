@@ -14,5 +14,3 @@ function maxConsecutiveOnes(arr){
 
 const arr = [1, 1, 0, 1, 1, 1, 0, 1];
 console.log(maxConsecutiveOnes(arr));
-
-

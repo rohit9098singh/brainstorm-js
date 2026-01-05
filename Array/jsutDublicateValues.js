@@ -24,7 +24,7 @@ let str2 = "my name is rohit hi";
 function checkHi(str2) {
   return str2.includes("hi"); 
 }
- 
+
 console.log(checkHi(str2)); // true (because "rohit" has "hi")
 
 
@@ -70,9 +70,12 @@ const obj = {},
 obj[obj2] = { name: "developer" };
 // When an object is used as a key, JavaScript internally calls its toString() method:
 // obj2.toString(); // "[object Object]"
-obj[obj3] = { name: "React" };
+obj[obj3] = { name: "React" };  //obj["[object Object]"] = { name: "React" };
 
 console.log(obj);
+// {
+//   "[object Object]": { name: "React" }
+// }
 
 
 // Bold (visual only)	Used just to make text look bold (no special meaning).	Text appears bold

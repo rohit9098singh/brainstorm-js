@@ -8,13 +8,15 @@ const { default: axios } = require("axios");
 
 
 
-const arr=[1,2,3,4,50]
+const arr = [1, 2, 3, 4, 50];
 
-function args(arg2,arg){
-    console.log(arg,arg2)
+function args(arg2, ...allValues) {
+  console.log("first argument:", arg2);
+  console.log("remaining values:", allValues);
 }
 
-console.log(args(...arr))
+args(1, ...arr);
+
 
 
 // axios.interceptors.request.use((config) => {

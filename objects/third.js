@@ -10,10 +10,14 @@
 let scores = { John: 85, Rohit: 95, Emma: 90 };
 console.log(keyWithHighestValue(scores));
 
-function keyWithHighestValue(obj) {
-  return Object.entries(obj).reduce((max, [key, value]) => {
-    value > obj[max] ? key : max;
-  }, Object.keys(obj)[0]);
-}
+// function keyWithHighestValue(obj) {
+//   return Object.entries(obj).reduce((max, [key, value]) => {
+//     value > obj[max] ? key : max;
+//   }, Object.keys(obj)[0]);
+// }
 
-
+// function keyWithHighestValue(obj){
+//   return Object.entries(obj).reduce((max,[key, value])=>{
+//      value > obj[key] ? key : max
+//   },Object.keys(obj)[0])
+// }

@@ -4,12 +4,12 @@ const student = {
 };
 
 // new property "rollNo" add karna
-Object.defineProperty(student, "rollNo", {
-  value: 101,
-  writable: false,       // false => value change nahi kar paoge
-  enumerable: true,      // true => for...in loop me dikhega
-  configurable: true     // true => delete ya redefine kar paoge
-});
+// Object.defineProperty(student, "rollNo", {
+//   value: 101,
+//   writable: false,       // false => value change nahi kar paoge
+//   enumerable: true,      // true => for...in loop me dikhega
+//   configurable: true     // true => delete ya redefine kar paoge
+// });
 
 console.log(student.rollNo); // 101
 

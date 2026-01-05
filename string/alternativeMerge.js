@@ -30,3 +30,4 @@ function mergeAlternately(str1,str2){
    return result
 }
 console.log(mergeAlternately("alice","working"))
+
