@@ -28,8 +28,8 @@ console.log(a)
 // Get information about the browser or screen
 
 
-// let numVal=2;
-// let b=!--numVal;
-// let c=!--numVal;
-// console.log(b,c)  // false true
+let numVal=2;
+let b=!--numVal;
+let c=!--numVal;
+console.log(b,c)  // false true
 
