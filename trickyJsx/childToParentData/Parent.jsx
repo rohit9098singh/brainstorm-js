@@ -17,18 +17,17 @@
 // export default Parent;
 
 
-import { useState } from 'react'
-import Child from './Child';
+import React, { useState } from 'react'
 
 const Parent = () => {
-  const [dataFromChild,setDataFromChild]=useState(null);
+  const [data,setData]=useState(null)
+
   const handleDataFromChild=(data)=>{
-    setDataFromChild(data)
+      setData(data)
   }
   return (
     <div>
-         <h1>{dataFromChild}</h1>
-         <Child onSendData={handleDataFromChild}/>
+      
     </div>
   )
 }

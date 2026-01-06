@@ -1,24 +1,28 @@
 import { useState } from "react";
 
-const index = () => {
-  const [counter, setCounter] = useState(0);
+const useCounter = () => {
+  const [count, setCount] = useState(0);
+
   const increment = () => {
-    setCounter(counter + 1);
+    setCount(prev => prev + 1);
   };
+
   const decrement = () => {
-    setCounter(counter - 1);
+    setCount(prev => prev - 1);
   };
+
   return {
-    counter,
+    count,
     increment,
     decrement,
   };
 };
 
-export default index;
+export default useCounter;
+
 
 const App = () => {
-  const { counter, increment, decrement } = index();
+  const { counter, increment, decrement } = useCounter();
   return (
     <div>
       <button onClick={decrement}>Decrease</button>

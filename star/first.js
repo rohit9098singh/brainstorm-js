@@ -22,22 +22,23 @@
 // rightTriangle(5);
 
 // right alligned traingle 
-function rightAlignedTriangle(n) {
-  for (let row = 1; row <= n; row++) {
-    console.log(" ".repeat(n - row) + "*".repeat(row));
-  }
-}
+// function rightAlignedTriangle(n) {
+//   for (let row = 1; row <= n; row++) {
+//     console.log(" ".repeat(n - row) + "*".repeat(row));
+//   }
+// }
 
-console.log("Right Aligned Triangle");
-rightAlignedTriangle(5);
+// console.log("Right Aligned Triangle");
+// rightAlignedTriangle(5);
 
 //Pyramid (Centered)
-function pyrimid(n){
-  for(let row=0;row<n;row++){
-       console.log(" ".repeat(n-row-1) + "*".repeat(2*row+1))
-  }
-}
-pyrimid(5)
+// function pyrimid(n){
+//   for(let row=0;row<n;row++){
+//        console.log(" ".repeat(n-row-1) + "*".repeat(2*row+1))
+//   }
+// }
+// pyrimid(5)
+
 
 // Inverted Pyramid
 
