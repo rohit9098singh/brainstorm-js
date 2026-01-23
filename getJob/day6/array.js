@@ -17,7 +17,7 @@ const obj2={
 }
 
 const {pqr,abc,xyz:{pqr:p}}= obj2
-console.log(pqr,abc,p)
+console.log("check what could be the value at",pqr,abc,p)
 
 function smallest(str){
     const words = str.split(" ");
@@ -113,7 +113,7 @@ function myFun(a,...b){
     return a;
     console.log(a+b)
 }
-console.log(myFun(1,2,3,4,5))
+console.log("unreal outout ",myFun(1,2,3,4,5))
 
 //===================================
 // console.log("my marks is",marks);

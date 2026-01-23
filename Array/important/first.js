@@ -16,6 +16,7 @@
 //     }
 //     return maxProduct;
 // }
+
 // console.log(maxProduct([2,3,-2,4]));
 
 
@@ -50,22 +51,21 @@
 // Input: ["i","love","coding","i","love","js"], k = 2
 // Output: ["i","love"]
 
-// function topFrequentWords(words, k) {
-//     // Step 1: Count frequency
-//     let seen = {};
-//     for (let word of words) {
-//         seen[word] = (seen[word] || 0) + 1;
-//     }
+function topFrequentWords(words, k) {
+    // Step 1: Count frequency
+    let seen = {};
+    for (let word of words) {
+        seen[word] = (seen[word] || 0) + 1;
+    }
+    // Step 2: Convert to array and sort by frequency descending
+    let sortedWords = Object.keys(seen).sort((a, b) => seen[b] - seen[a]);
+    console.log("check for the values what is getting here",sortedWords)
 
-//     // Step 2: Convert to array and sort by frequency descending
-//     let sortedWords = Object.keys(seen).sort((a, b) => seen[b] - seen[a]);
-//     console.log("check for the values what is getting here",sortedWords)
+    // Step 3: Return top k words
+    return sortedWords.slice(0, k);
+}
 
-//     // Step 3: Return top k words
-//     return sortedWords.slice(0, k);
-// }
-
-// console.log(topFrequentWords(["i","love","coding","i","love","js"], 2));
+console.log(topFrequentWords(["i","love","coding","i","love","js"], 2));
 // Output: ["i", "love"]
 
 
@@ -77,7 +77,9 @@ function rotateWithSome(arr, key) {
     let res = [];
     let noOfItemsToRotate = key % arr.length;
     let toRotateValue = arr.slice(-noOfItemsToRotate)
+    console.log("kuch",toRotateValue)
     let initialValue = arr.slice(0, -noOfItemsToRotate)
+    console.log("hua ",initialValue)
     res.push(...toRotateValue,...initialValue)
     return res
 }
@@ -100,6 +102,7 @@ function nextGreaterNumber(arr){
     }
     result.push(next)
    }
+   return result
 }
 
 console.log("the resultant value of that is ",nextGreaterNumber([2, 1, 2, 4, 3]))

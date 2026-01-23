@@ -12,3 +12,6 @@ function sumOfEvenNumbers(arr) {
 
 // Example
 console.log(sumOfEvenNumbers([1, 2, 3, 4, 5, 6]));  // 👉 12 (2+4+6)
+
+
+

@@ -49,12 +49,12 @@ console.log(toCountValue(arr))
 
 
 
-for(let char of arr){
-  if(obj[char]){
-    obj[char]++
-  }
-  else{
-    obj[num] =1
-  }
-  return obj
-}
+// for(let char of arr){
+//   if(obj[char]){
+//     obj[char]++
+//   }
+//   else{
+//     obj[num] =1
+//   }
+//   return obj
+// }

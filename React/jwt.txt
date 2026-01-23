@@ -6,7 +6,7 @@
 
             Short Expiry Time: Keep access tokens short-lived (e.g., 15–30 min) to reduce risk if leaked.
 
-            Use Refresh Tokens: Issue a refresh token for getting new access tokens without forcing the user to log in again.
+            Use Refresh Tokens: Issue a refresh token for getting new access tokens without forcin er to log in again.
 
             Safe Storage: Store JWT in HTTP-only cookies instead of localStorage to protect from XSS attack.
 
@@ -57,15 +57,15 @@ Signature: Hashed with a secret key to ensure the token hasn’t been tampered w
 
 ===================================================================================================================================
 In short (most common RESTful API design):
-GET → JSON (200 OK)
+GET → JSON (200 OK)  Object | Array<Object>
 
-POST → JSON (201 Created)
+POST → JSON (201 Created)  Object / JSON
 
-PUT → JSON (200 OK or 204 No Content)
+PUT → JSON (200 OK or 204 No Content)  Object | null
 
 PATCH → JSON (200 OK)
 
-DELETE → 204 No Content or success message JSON
+DELETE → 204 No Content or success message JSON  Object | null
 
 
 setTimeout → Executes a function once after a specified delay (in milliseconds).

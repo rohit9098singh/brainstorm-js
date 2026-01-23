@@ -2,13 +2,16 @@ const obj1 = {}
 const obj2 = { name: "Aman Kesharwani" }
 const obj3 = { name: "Rohit singh" }
 
-obj1[obj2] = { name: "Ridhu ritik" }
-obj1[obj3] = { name: "aman" }
+const first=obj1[obj2] = { name: "Ridhu ritik" }
+console.log("1",first)
+
+const second=obj1[obj3] = { name: "aman" }
+console.log("2",second)
 
 console.log(obj1[obj2])
 
 
-console.log([] === [])
+// console.log([] === [])
 console.log([] == []) 
 
 

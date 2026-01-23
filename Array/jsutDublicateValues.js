@@ -1,21 +1,22 @@
-function toGetOnlyDublicate(arr) {
-  let seen = {};
-  let newArray = [];
+// function toGetOnlyDublicate(arr) {
+//   let seen = {};
+//   let newArray = [];
 
-  for (let i = 0; i < arr.length; i++) {
-    if (seen[arr[i]]) {
-      // already seen → it's a duplicate
-      newArray.push(arr[i]);
-    } else {
-      // first time → mark as seen
-      seen[arr[i]] = true;
-    }
-  }
+//   for (let i = 0; i < arr.length; i++) {
+//     if (seen[arr[i]]) {
+//       // already seen → it's a duplicate
+//       newArray.push(arr[i]);
+//     } else {
+//       // first time → mark as seen
+//       seen[arr[i]] = true;
+//     }
+//   }
 
-  return newArray;
-}
+//   return newArray;
+// }
 
-console.log(toGetOnlyDublicate([1,2,3,4,4,2])); 
+// console.log(toGetOnlyDublicate([1,2,3,4,4,2])); 
+
 // 👉 [4, 2]
 
 
