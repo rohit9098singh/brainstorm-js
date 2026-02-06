@@ -102,7 +102,7 @@ function nextGreaterNumber(arr){
     }
     result.push(next)
    }
-   return result
+   return "check ", result
 }
 
 console.log("the resultant value of that is ",nextGreaterNumber([2, 1, 2, 4, 3]))
