@@ -10,6 +10,8 @@ console.log("Loop start");
 customLoop();
 console.log("Loop end");
 
+
+
 // destructuring trick 
 
 const [,,, forty] = [10, 20, 30, 40, 50];

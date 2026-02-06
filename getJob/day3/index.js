@@ -9,7 +9,12 @@ console.log(idx2);//-1
 // searchElement → कौन-सा element खोजना है।
 // fromIndex → किस index से search शुरू करनी है। (optional)
 const arr=[1,2,3,4]
-console.log(arr.includes(2,-1)); // true
+console.log(arr.includes(4,-1)); // false
+
+// arr.length = 4
+// fromIndex = -1
+
+// actual index = 4 + (-1) = 3
 
 
 //  i ahve to delete last three of any aray length
@@ -21,7 +26,7 @@ console.log(last3);
 
 // remove last 3 elements and return them
 const res = arr.splice(-3);
-console.log(res); 
+console.log("with splice",res); 
 
 
 // scope and shadowing 

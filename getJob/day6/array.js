@@ -16,8 +16,8 @@ const obj2={
     }
 }
 
-const {pqr,abc,xyz:{pqr:p}}= obj2
-console.log("check what could be the value at",pqr,abc,p)
+const {pqr:q,abc,xyz:{pqr:p,abc:r}}= obj2
+console.log("check what could be the value at",q,abc,p,r)
 
 function smallest(str){
     const words = str.split(" ");
@@ -35,25 +35,13 @@ console.log(smallest("this is the helloword"));
 
 // Warning: Each child in a list should have a unique "key" prop.
 
-console.log(false === ![]);
+console.log("cehck ",false === ![]);
 console.log("i think it is false",false == [])  // [] is an object, false is boolean → type coercion
 
 const arr=[1,2,3,4];
 const str="1,2,3,4"
 console.log(arr== str)
 
-
-
-// | Expression       | Evaluates to | Explanation                                             |
-// | ---------------- | ------------ | ------------------------------------------------------- |
-// | `[] == ""`       | true         | `[]` → `""` (toString) → `"" == ""` ✅                   |
-// | `[] == 0`        | true         | `[]` → `""` → Number(`""`) = 0 → `0 == 0` ✅             |
-// | `false == []`    | true         | `false` → 0, `[]` → `""` → 0 → `0 == 0` ✅               |
-// | `false == ![]`   | true         | `![]` → false → `false == false` ✅                      |
-// | `[1,2] == "1,2"` | true         | `[1,2].toString()` → `"1,2"` → `"1,2" == "1,2"` ✅       |
-// | `false == [1]`   | false        | `[1].toString()` → `"1"` → Number("1") = 1 → `0 == 1` ❌ |
-// | `!![]`           | true         | `[]` truthy → double NOT → true ✅                       |
-// | `![]`            | false        | `[]` truthy → NOT → false ✅                             |
 
 
 let obj={
@@ -109,7 +97,7 @@ console.log("splitted value:", SplitFunction("MyNameIsRohitSingh"));
 //=================================
 function myFun(a,...b){
     console.log("hello ");
-    console.log(b);
+    console.log("raja tani jae na bahiriya",b);
     return a;
     console.log(a+b)
 }

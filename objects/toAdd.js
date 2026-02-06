@@ -14,15 +14,15 @@ console.log("check output",student1)
 // enumerable: true ka matlab hai property ko loop me ya Object.keys() me dikhaya jaayega.
 // enumerable: false hone par property exist toh karegi, lekin for...in loop ya Object.keys() me nahi dikhegi.
 
-Object.defineProperty(student,"age",{
-    configurable:true
+Object.defineProperty(student1,"age",{
+    value:30,
+    writable:false
 })
 
-student.age=500
-console.log(student)
+console.log("check what i am getting ",student1)
+
 
 //======================
-
 const student = {
   age: 20,
   branch: "Computer Science"
@@ -36,8 +36,7 @@ Object.defineProperty(student, "name", {
   enumerable: true
 });
 
-
-// // rollNumber: ❌ not writable, ✅ configurable
+// rollNumber: ❌ not writable, ✅ configurable
 Object.defineProperty(student, "rollNumber", {
   value: "CS101",
   writable: false,
@@ -45,7 +44,7 @@ Object.defineProperty(student, "rollNumber", {
   enumerable: true
 });
 
-// // college: ✅ writable, ❌ not configurable
+// college: ✅ writable, ❌ not configurable
 Object.defineProperty(student, "college", {
   value: "ABC University",
   writable: true,

@@ -1,17 +1,17 @@
-// const obj1 = {}
-// const obj2 = { name: "Aman Kesharwani" }
-// const obj3 = { name: "Rohit singh" }
+const obj1 = {}
+const obj2 = { name: "Aman Kesharwani" }
+const obj3 = { name: "Rohit singh" }
 
-// const first=obj1[obj2] = { name: "Ridhu ritik" }
-// console.log("1",first)
+const first=obj1[obj2] = { name: "Ridhu ritik" }
+console.log("1",first)
 
-// const second=obj1[obj3] = { name: "aman" }
-// console.log("2",second)
+const second=obj1[obj3] = { name: "aman" }
+console.log("2",second)
 
-// console.log(obj1[obj2])
+console.log(obj1[obj2])
 
 
-// // console.log([] === [])
+// console.log([123] === [123])
 // console.log([] == []) 
 
 

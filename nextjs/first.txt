@@ -65,10 +65,16 @@ Next.js is a **full-stack framework** that supports SSR, SSG, ISR, API routes, i
     2️⃣ getServerSideProps – (SSR ke liye)
     👉 Har ek request par data fetch hota hai – yani jab bhi user page load karega, server API se naya data leke HTML banata hai.
 ---
+ What are Server Components and Client Components in Next.js 13+?
 
-**4️⃣ What are Server Components and Client Components in Next.js 13+?**
-By default, components in Next.js are **Server Components** (no JS sent to browser, super fast). If you add `use client` at the top, it becomes a **Client Component** (can use state, events, hooks like `useState`).
+    Next.js 13+ me by default sab components Server Components hote hain, 
+    jo server par render hote hain aur browser ko JavaScript nahi bhejte,
+    isliye fast aur SEO-friendly hote hain. Ye database, APIs aur secrets
+    directly access kar sakte hain, lekin state, effects aur browser events use nahi kar sakte.
 
+    Client Components "use client" directive se bante hain, aur inme useState,
+    useEffect, event handlers jaise onClick use ho sakte hain, lekin inka
+    JavaScript browser me jata hai aur ye directly server resources access nahi karte.
 ---
 
 **5️⃣ How does Next.js handle routing differently than React Router?**
