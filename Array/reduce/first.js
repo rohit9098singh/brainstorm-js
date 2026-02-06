@@ -1,21 +1,21 @@
-// const arr=[1,2,3,4,5];
-// const res=arr.reduce((acc,curr)=>{
-//     return acc<curr
-// },5)
-// console.log(res)
+const arr=[1,2,3,4,5];
+const res=arr.reduce((acc,curr)=>{
+    return acc<curr
+},5)
+console.log(res)
 
 const { default: axios } = require("axios");
 
 
 
-const arr = [1, 2, 3, 4, 50];
+// const arr = [1, 2, 3, 4, 50];
 
-function args(arg2, ...allValues) {
-  console.log("first argument:", arg2);
-  console.log("remaining values:", allValues);
-}
+// function args(arg2, ...allValues) {
+//   console.log("first argument:", arg2);
+//   console.log("remaining values:", allValues);
+// }
 
-args(1, ...arr);
+// args(1, ...arr);
 
 
 

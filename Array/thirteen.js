@@ -18,8 +18,6 @@
 
 // console.log(checkTheSquareOfFirstInSecond([1,2,3],[1,4,9])); // true
 
-
-
 function checkTheSquareOfFirstInSecond(arr1,arr2){
       if(arr1.length !== arr2.length){
         return "must be of same length"
