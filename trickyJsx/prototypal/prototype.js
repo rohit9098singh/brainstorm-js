@@ -4,6 +4,8 @@ let company2 = {
     console.log("Paying");
   },
 }; //company object
+
+
 let worker = {
   id: 1,
   work: function () {
