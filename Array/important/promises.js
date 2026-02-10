@@ -281,7 +281,7 @@ run()
 
 console.log('start');
 
-const p = new Promise((resolve, reject) => {
+const p8 = new Promise((resolve, reject) => {
   console.log('executor');
   resolve('RESULT');
   reject('ERR');
@@ -295,13 +295,13 @@ setTimeout(() => console.log('fast-timer'), 0);
 
 console.log('sync-end');
 
-p.then(v => {
+p8.then(v => {
   console.log('then-A:', v);
 }).then(v => {
   console.log('then-B:', v);
 });
 
-p.then(v => {
+p8.then(v => {
   console.log('then-C:', v);
 }).then(v => {
   console.log('then-D:', v);

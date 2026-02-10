@@ -17,19 +17,4 @@ const Parent = () => {
 export default Parent;
 
 
-// import React, { useState } from 'react'
 
-// const Parent = () => {
-//   const [data,setData]=useState(null)
-
-//   const handleDataFromChild=(data)=>{
-//       setData(data)
-//   }
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
-
-// export default Parent
