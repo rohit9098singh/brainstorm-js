@@ -9,3 +9,6 @@ let studentObj = {
 let length = Object.keys(studentObj).length;
 
 console.log(length); 
+
+
+

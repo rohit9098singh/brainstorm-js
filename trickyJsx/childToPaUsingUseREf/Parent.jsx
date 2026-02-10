@@ -11,7 +11,7 @@ const Parent = () => {
 
   return (
     <div>
-      <Child inputRef={inputRef} />
+      <Child ref={inputRef} />
       <button onClick={handleGetData}>Get Data From Child</button>
     </div>
   );

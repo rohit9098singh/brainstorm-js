@@ -11,3 +11,15 @@
 // let obj = { name: "Rohit", role: "student" };
 // console.log(invertObject(obj));
 
+
+
+function replaceKeyWithValueAndValueWithKey(obj){
+  let newObj={};
+  for(let key in obj){
+      newObj[obj[key]]=key
+  }
+  return newObj
+}
+
+let obj = { name: "Rohit", role: "student" };
+console.log(replaceKeyWithValueAndValueWithKey(obj))

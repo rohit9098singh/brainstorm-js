@@ -23,3 +23,5 @@ Object.defineProperty(student, "batch", {
 
 student.batch = 15;  // change nahi hoga
 console.log(student.batch); // 12
+
+
