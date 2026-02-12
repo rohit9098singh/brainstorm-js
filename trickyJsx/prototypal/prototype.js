@@ -12,11 +12,11 @@ let worker = {
     console.log("Working");
   },
 }; //worker object
+
+
 worker.__proto__ = company2; //worker object inherits company object
 console.log(worker);
 worker.pay();
-
-
 
 
 let company = {
@@ -25,6 +25,7 @@ let company = {
     console.log("Paying");
   },
 };
+
 let intern = Object.create(company, {
   experience: { value: 2 },
 }); //creating intern object from company object

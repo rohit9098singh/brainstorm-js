@@ -172,7 +172,8 @@ const [count, setCount] = useState(0); // count is state
 
 ### ❓ Why is React called declarative?
 
-You **declare what** the UI should look like, not **how** to update it.
+You tell React WHAT the UI should look like for a given state.
+React figures out HOW to update the DOM.
 
 ```javascript
 // Declarative (React)

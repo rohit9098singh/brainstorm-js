@@ -1,3 +1,6 @@
+// find the type cohersion in getjob day6 
+
+
 // Input: [2,3,-2,4]
 // Output: 6  // because [2,3] gives 6
 
