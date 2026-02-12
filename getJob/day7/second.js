@@ -70,7 +70,7 @@ const arrs=[1,2,3,4,5,6];
 
 function returnSum(arr){
     const res= arr.reduce((acc,curr)=>{
-        acc+curr
+       return acc+curr
     },0)
     console.log(res)
     return res

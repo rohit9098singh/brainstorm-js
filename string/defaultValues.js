@@ -17,7 +17,7 @@ greet()
 const arr=[1,2,3,4,5]
 
 const res=arr.find((val)=>val > 9);
-console.log(res)
+console.log("getiing undefined",res)
 
 
 function check(){
