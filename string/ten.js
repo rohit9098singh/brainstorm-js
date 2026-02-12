@@ -24,3 +24,6 @@ function toCheckItContainOnlyDigit(str){
 }
 console.log(toCheckItContainOnlyDigit("123456"))
 console.log(toCheckItContainOnlyDigit("12345a"))
+
+
+

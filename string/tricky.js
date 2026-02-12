@@ -10,26 +10,20 @@
 // console.log(toReverseString("rohit")); // tihor
 
 
-function toreverseWords(sentence) {
-  let res = "";
-  let word = "";
-
-  for (let i = sentence.length - 1; i >= 0; i--) {
-    console.log("yaha pe kya aara hai",sentence[i])
-    if (sentence[i] === " ") {
-      res += word + " ";   // 👈 ab peeche jodo
-      word = "";
-    } else {
-      word = sentence[i] + word ;
-      // word += sentence[i] ;
+function lastTodayProblem(str) {
+    let words = str.split(" ");
+    let res = "";
+    
+    for (let i = words.length - 1; i >= 0; i--) {
+        res += words[i] + " ";
     }
-  }
-
-  res += word;  // last word add
-  return res.trim();
+    
+    return res.trim();
 }
 
-console.log(toreverseWords("hello my name is rohit"));
+console.log(lastTodayProblem("hello my name is rohit"));
+
+
 // ✅ Output: "rohit is my name hello"
 
 // function withBuildIn(sentence) {
