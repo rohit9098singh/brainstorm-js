@@ -4,7 +4,7 @@ function betterVersion(arr){
 }
 console.log(betterVersion(arr2))
 
-// seperate one didit number in one array tw digit number in another arrray and three digit in another array
+// seperate one did it number in one array tw digit number in another arrray and three digit in another array
 
 function segregateArray(arr) {
   let single = [];
