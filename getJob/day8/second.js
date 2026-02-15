@@ -12,10 +12,6 @@ function func() {
 }
 func()
 
-//  i am there
-//  i am here
-//  i am here
-//  i am here
 
 function currying(val1) {
     return function (val2) {
@@ -226,6 +222,8 @@ function square(){
 
 let val=(sum(),square()); // The comma operator: Evaluates expressions from left to right Returns the value of the LAST expression
 console.log(val)
+
+
 
 
 
