@@ -8,6 +8,7 @@ const result = (function(a,b){
 })(2,3);
 console.log(result);
 
+
 // ================================ question 3 ================================
 const counter = (function(){
   let count = 0;
