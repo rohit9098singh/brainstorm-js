@@ -47,7 +47,7 @@ let arr6 = [10, 20, 30, 40];
 let newArr = arr.slice(0, 1).concat(arr.slice(2));
 console.log(newArr);  // [10, 30, 40]
 
-
+// note in slice if end is < start it reutrn empty aaray
 
 function abc(a,b,c){
 
