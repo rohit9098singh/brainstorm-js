@@ -45,16 +45,28 @@ const { default: axios } = require("axios");
 
 // protypal inheritance 
 
-// const parent={
-//     greet:function(){
-//         console.log(`hello , i am ${this.name}`)
-//     }
-// }
-// const child={
-//     name:"Rohit"
-// }
+const parent={
+    greet:function(){
+        console.log(`hello , i am ${this.name}`)
+    }
+}
+const child={
+    name:"Rohit"
+}
 
-// child.__proto__=parent;
-// child.greet();
+child.__proto__=parent;
+child.greet();
 
 
+const parent1={
+    name:"parent1",
+    class:12
+}
+
+const child1={
+    name:"childone"
+}
+
+child1.__proto__=parent1;
+
+console.log("am i getting class of the parent or not ",child1.class)
