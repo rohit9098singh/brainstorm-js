@@ -48,3 +48,6 @@ abc() // ?
 // 👉 Function declarations sirf creation phase me hoist hote hain
 // 👉 Execution phase me var assignment zyada powerful hota hai
 // 👉 Ek baar abc ko new value mil gayi, function declaration dubara overwrite nahi karta
+
+
+

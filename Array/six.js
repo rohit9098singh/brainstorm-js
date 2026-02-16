@@ -31,30 +31,19 @@
 // console.log(tocountValues(arrq))
 
 function toCountValue(arr){
-  let obj={}
-  for(let i=0;i<arr.length;i++){
-    let num=arr[i]
-    if(obj[num]){
-      obj[num]++
+  let count={}
+  for(let item of arr){
+    // count[item]=(count[item] || 0) +1
+    if(count[item]){
+      count[item]++;
     }
     else{
-      obj[num]=1
+      count[item]=1
     }
   }
-  return obj
+  return count
 }
 
 let arr=[1, 2, 2, 3, 4, 4, 4, 5]
 console.log(toCountValue(arr))
 
-
-
-// for(let char of arr){
-//   if(obj[char]){
-//     obj[char]++
-//   }
-//   else{
-//     obj[num] =1
-//   }
-//   return obj
-// }

@@ -23,6 +23,7 @@ function checkTheSquareOfFirstInSecond(arr1,arr2){
         return "must be of same length"
       }
       let doubledArray=arr1.map((item)=>item*item).sort((a,b)=>a-b);
+      
       let newArr2=arr2.sort((a,b)=>a-b);
       for(let i=0;i<doubledArray.length;i++){
           if(!newArr2.includes(doubledArray[i])){

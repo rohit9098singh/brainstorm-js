@@ -7,6 +7,15 @@
 //     }
 // }
 
+const fibonacci2=function fib(n){
+    if(n==0 || n==1){
+      return 1
+    }
+    else{
+      return fib(n-1) + fib (n-2)
+    }
+}
+
 
 let num=10;
 console.log("fibonacci series")

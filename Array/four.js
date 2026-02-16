@@ -1,14 +1,5 @@
-// //1) Write a function to find the second-largest number in an array.
 
-// function findSecondLargest(arr) {
-//   arr.sort((a, b) => {
-//     return b - a;
-//   });
-//   return arr[1];
-// }
-// console.log(findSecondLargest([10, 20, 4, 45, 99]));
-
-// //2) condition where same number 99 present three times;
+ //2) condition where same number 99 present three times;
 
 // function findSecondLargest2(arr) {
 //   arr.sort((a, b) => {
@@ -48,36 +39,3 @@
 
 
 
-// function toFindtheSecondLarget(arr){
-//   let largest=-Infinity;
-//   let secondLargest=-Infinity;
-//   for(let i=0;i<arr.length;i++){
-//       if(arr[i]>largest){
-//         secondLargest=largest;
-//         largest=arr[i]
-//       }
-//       else if(arr[i]>secondLargest && arr[i] !=largest){
-//          secondLargest=arr[i];
-//       }
-//   }
-//   return secondLargest === -Infinity ? "no second largest element":secondLargest
-// }
-
-// console.log(toFindtheSecondLarget([10, 20, 4, 45, 99]))
-
-function toFindtheSecondLarget(arr){
-  let largest=-Infinity;
-  let secondLargest=-Infinity;
-  for(let i=0;i<arr.length;i++){
-      if(arr[i]>largest){
-        secondLargest=largest;
-        largest=arr[i];
-      }
-      else if(arr[i]>secondLargest && arr[i]!=largest ){
-        secondLargest=arr[i]
-      }
-  }
-  return secondLargest === -Infinity ? "no second largest" :secondLargest
-}
-
-console.log(toFindtheSecondLarget([10,20,30,40]))

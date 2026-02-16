@@ -10,6 +10,7 @@ function subs(a, b) {
 }
 
 
+
 // Test
 console.log(subs(10, 2));  // 8
 console.log(subs(10)(2));  // 8
