@@ -14,12 +14,12 @@
 // console.log(rightAngledname("rojit"))
 
 // Left-Aligned Triangle
-function rightTriangle(n) {
-  for (let i = 1; i <= n; i++) {
-    console.log("* ".repeat(i));
-  }
-}
-rightTriangle(5);
+// function rightTriangle(n) {
+//   for (let i = 1; i <= n; i++) {
+//     console.log("* ".repeat(i));
+//   }
+// }
+// rightTriangle(5);
 
 // right alligned traingle 
 // function rightAlignedTriangle(n) {
@@ -42,13 +42,13 @@ rightTriangle(5);
 
 // Inverted Pyramid
 
-// function invertedPyramid(n){
-//   for(let row=n-2;row>=0;row--){
-//       console.log(" ".repeat(n-row-1)+ "*".repeat(2*row+1))
-//   }
-// }
+function invertedPyramid(n){
+  for(let row=n-1;row>=0;row--){
+      console.log(" ".repeat(n-row-1)+ "*".repeat(2*row+1))
+  }
+}
 
-// invertedPyramid(5)
+invertedPyramid(5)
 
 //Full Diamond
 
@@ -56,7 +56,7 @@ rightTriangle(5);
 //   for(let row=0;row<n;row++){
 //      console.log(" ".repeat(n-row-1) + "*".repeat(2*row+1))
 //   }
-//   for(let row=n-2;row>=0;row--){
+//   for(let row=n-1;row>=0;row--){
 //       console.log(" ".repeat(n-row-1)+ "*".repeat(2*row+1))
 //   }
 // }

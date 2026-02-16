@@ -23,6 +23,3 @@ let student=Object.create(parentObj,{rollNo:{value:21}})
 student.greet({name:"Rohit"})
 
 
-
-
-
