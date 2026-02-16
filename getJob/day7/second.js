@@ -63,7 +63,7 @@ const obj2={
     age:24
 }
 
-console.log(obj2.toString())
+console.log("check the detals ",obj2.toString())
 
 
 const arrs=[1,2,3,4,5,6];

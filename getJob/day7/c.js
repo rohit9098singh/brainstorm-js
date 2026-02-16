@@ -9,7 +9,7 @@ function helo(){
     }
 }
 
-console.log(helo())  // js automatically inset the semicolan there and becaue of which below object becomes unrecchable
+console.log("check hello function call",helo())  // js automatically inset the semicolan there and becaue of which below object becomes unrecchable
 
 // What Are Redux DevTools?
 

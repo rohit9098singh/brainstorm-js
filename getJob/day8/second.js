@@ -43,7 +43,7 @@ function check(str) {
     return res.join(" ");
 }
 
-console.log(check(str));
+console.log("yaha pe hmlog nikal kya rahe hai ",check(str));
 
 
 function charCount(str) {
@@ -167,7 +167,7 @@ console.log(countOccurrences(newstr, "sh"));
 const str1 = "sk"
 const str2 = "Badsha"
 const checkStr = str1 && str2
-console.log(checkStr)
+console.log("check of the && ",checkStr)
 
 // undefined does not return true or false else it 
 // evalutes based on it return first value it finds

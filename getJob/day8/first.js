@@ -92,7 +92,7 @@ console.log("A"- "B" + 2) // Nan
 
 
 console.log("this is even nan",[1,2,3]+[4,5,6]) // 1,2,36,5,6
-console.log("this case gives nah",["hello"]+ [123])
+console.log("this case gives nah",["hello"]- [123])
 
 
 const unique = [...new Set([1,1,1,1,1])];

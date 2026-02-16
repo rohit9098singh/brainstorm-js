@@ -35,7 +35,7 @@ console.log(smallest("this is the helloword"));
 
 // Warning: Each child in a list should have a unique "key" prop.
 
-console.log("cehck ",false === ![]);
+console.log("cehck ",false === ![]); // false == true
 console.log("i think it is false",false == [])  // [] is an object, false is boolean → type coercion
 
 const arr=[1,2,3,4];

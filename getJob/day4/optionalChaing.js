@@ -14,7 +14,6 @@
 // If address did exist, then .city would be accessed normally.
 
 
-
 // 1. The Problem with ||
 // || treats all falsy values (0, "", false, null, undefined) as “missing”:
 let score = 0;
