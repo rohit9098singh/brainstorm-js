@@ -5,6 +5,7 @@ function groupAnagrams(words) {
     // step 1: sort word
     const key = word.split("").sort().join("");
 
+
     // step 2: group by key
     if (!map[key]) {
       map[key] = [];

@@ -33,13 +33,14 @@
 function toCountValue(arr){
   let count={}
   for(let item of arr){
-    // count[item]=(count[item] || 0) +1
-    if(count[item]){
-      count[item]++;
-    }
-    else{
-      count[item]=1
-    }
+    // // count[item]=(count[item] || 0) +1
+    // if(count[item]){
+    //   count[item]++;
+    // }
+    // else{
+    //   count[item]=1
+    // }
+    count[item]=(count[item]|| 0) +1
   }
   return count
 }

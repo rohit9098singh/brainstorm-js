@@ -125,5 +125,12 @@ function capitalizeFirstLetterWord(str){
 }
 
 console.log(capitalizeFirstLetterWord(str))
+ 
+
+// if you just have to capitialize the first leteer of the word 
+
+const res=str[0].toLocaleUpperCase() + str.slice(1)
+
+console.log("did i did the res",res)
 
 

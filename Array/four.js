@@ -17,25 +17,25 @@
 
 // //3) without using build in function over here
 
-// function findSecondLargest(arr) {
-//   let largest = -Infinity;
-//   let secondLargest = -Infinity;
+function findSecondLargest(arr) {
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
 
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > largest) {
-//       secondLargest = largest;
-//       largest = arr[i];
-//     } else if (arr[i] > secondLargest && arr[i] !== largest) {
-//       secondLargest = arr[i];
-//     }
-//   }
-//    return secondLargest === -Infinity ? "No second largest" : secondLargest;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      secondLargest = largest;
+      largest = arr[i];
+    } else if (arr[i] > secondLargest && arr[i] !== largest) {
+      secondLargest = arr[i];
+    }
+  }
+   return secondLargest === -Infinity ? "No second largest" : secondLargest;
 
-// }
+}
 
-// // Examples
-// console.log(findSecondLargest([10, 20, 4, 45, 99])); 
-// console.log(findSecondLargest([5, 5, 5]));             
+// Examples
+console.log(findSecondLargest([10, 20, 4, 45, 99])); 
+console.log(findSecondLargest([5, 5, 5]));             
 
 
 

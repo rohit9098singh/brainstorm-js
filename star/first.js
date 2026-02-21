@@ -52,16 +52,18 @@ invertedPyramid(5)
 
 //Full Diamond
 
-// function fullDimand(n){
-//   for(let row=0;row<n;row++){
-//      console.log(" ".repeat(n-row-1) + "*".repeat(2*row+1))
-//   }
-//   for(let row=n-1;row>=0;row--){
-//       console.log(" ".repeat(n-row-1)+ "*".repeat(2*row+1))
-//   }
-// }
+function fullDimand(n){
+  for(let row=0;row<n;row++){
+     console.log(" ".repeat(n-row-1) + "*".repeat(2*row+1))
+  }
+  for(let row=n-1;row>=0;row--){
+      console.log(" ".repeat(n-row-1)+ "*".repeat(2*row+1))
+  }
+}
 
-// fullDimand(5);
+
+fullDimand(5);
+
 
 
 
