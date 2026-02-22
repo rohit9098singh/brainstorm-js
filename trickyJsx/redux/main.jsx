@@ -1,4 +1,9 @@
 // features/counter/counterSlice.js
+
+// Redux middleware are functions that intercept actions before they reach reducers.
+// Popular middleware include redux-thunk for simple asynchronous logic and redux-saga 
+// for handling complex side effects like API calls, cancellation, and parallel tasks.
+
 import { createSlice } from "@reduxjs/toolkit";
 
 const counterSlice = createSlice({

@@ -14,6 +14,8 @@ function groupAnagrams(words) {
     map[key].push(word);
   }
 
+  console.log("whats at here ",map)
+
   // step 3: return only groups
   return Object.values(map);
 }
