@@ -4,8 +4,7 @@ const res=arr.reduce((acc,curr)=>{
 },5)
 console.log(res)
 
-const { default: axios } = require("axios");
-
+// const { default: axios } = require("axios");
 
 
 // const arr = [1, 2, 3, 4, 50];
@@ -16,8 +15,6 @@ const { default: axios } = require("axios");
 // }
 
 // args(1, ...arr);
-
-
 
 // axios.interceptors.request.use((config) => {
 //     if (LongUrls.includes(config.url)) {

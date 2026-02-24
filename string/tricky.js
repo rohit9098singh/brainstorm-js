@@ -1,5 +1,3 @@
-
-
 // function toReverseString(str) {
 //   let rev = "";
 //   for (let i = str.length - 1; i >= 0; i--) {  // should be >= 0 not > 0

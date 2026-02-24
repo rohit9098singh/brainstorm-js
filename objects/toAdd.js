@@ -19,6 +19,7 @@ Object.defineProperty(student1,"age",{
     writable:false
 })
 
+
 console.log("check what i am getting ",student1)
 
 

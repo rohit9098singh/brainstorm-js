@@ -14,9 +14,3 @@ console.log(mergeString("abc", "pqr"));   // "apbqcr"
 console.log(mergeString("ab", "pqrs"));   // "apbqrs"
 
 
-
-function mergeString2(str1, str2) {
-  return str1 + str2;
-}
-
-console.log(mergeString2("abc", "pqr")); // "abcpqr"
