@@ -53,7 +53,7 @@ return <button onClick={() => setCount(count + 1)}>{count}</button>;
 const element = <h1>Hello World!</h1>;
 
 // Without JSX (using React.createElement)
-const element = React.createElement('h1', null, 'Hello World!');
+const element2 = React.createElement('h1', null, 'Hello World!');
 ```
 
 **Yes**, you can write React without JSX, but JSX makes code more readable and developer-friendly.
