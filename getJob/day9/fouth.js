@@ -33,6 +33,7 @@ let original ="reactjs"
 let toRotate="jsreact"
 
 let res=toRotate + toRotate;
+console.log("res checi",res)
 
 console.log(res.includes(original))
 
@@ -71,27 +72,6 @@ console.log(isPalindrome("madam")); // true
 console.log(isPalindrome("hello")); // false
 
 
-function isPalindrome(str) {
-  let left = 0;
-  let right = str.length - 1;
-
-  while (left < right) {
-    if (str[left] !== str[right]) {
-      return false;
-    }
-    left++;
-    right--;
-  }
-
-  return true;
-}
-
-// Example
-console.log(isPalindrome("madam")); // true
-console.log(isPalindrome("hello")); // false
-
-
-
 // refernce data type ka addition pe .toString() method call hota hai
 
 console.log([] + []) // " " + " "= ""
@@ -100,6 +80,9 @@ console.log({} + []) // [object,object]+ ""=   [object,object]
 
 
 // write a infinte loop without breaking the code at here 
+
+
+
 
 function* infinteLoop(){
     let count =0;
@@ -112,3 +95,13 @@ console.log(gen.next())
 console.log(gen.next())
 console.log(gen.next())
 console.log(gen.next())
+
+// create a otp generator 
+
+function generateOtp(){
+    const random = Math.floor(Math.random() * 9000) + 1000
+    console.log(random)
+}
+
+generateOtp()
+
