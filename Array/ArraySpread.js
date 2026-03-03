@@ -13,5 +13,4 @@ let a = null;
 let [...a1] = [10, 20];
 
 console.log(a1); // 10
-console.log(b); // 20
 
