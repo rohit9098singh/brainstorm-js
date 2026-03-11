@@ -24,7 +24,7 @@ console.log(obj) // this mutate the original array
 let a={a:1,b:2,c:3,d:4};
 
 let {b,...rest}=a;
-console.log(rest)
+console.log("kya b evalute hogya hai isme kga ",rest)
 
 //3rd object.entries and filter
 

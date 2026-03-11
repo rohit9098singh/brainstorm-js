@@ -1,19 +1,17 @@
-function mergeIntervals(intervals) {
-     let result=[];
-     intervals.sort((a,b)=>a[0]-b[0]);
-     let currentInterval=intervals[0]
-     for(let i=0;i<intervals.length;i++){
-         let nextInterval=intervals[i]
-         if(currentInterval[1]>=nextInterval[0]){
-            currentInterval[1]=Math.max(currentInterval[1],nextInterval[1]);
-         }
-         else{
-            result.push(currentInterval)
-            currentInterval=nextInterval
-         }
-     }
-     result.push(currentInterval)
-     return result
-}
+const arr=[1,2,3,3,4,4,6,5]
 
-console.log(mergeIntervals([[1, 3], [2, 6], [8, 10], [15, 18]]));
+function findTheNextGreaterNumber(arr){
+     let next=-Infinity;
+    let result=[];
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+              if(arr[j]> arr[i]){
+                next=arr[j];
+                break;
+              }
+        }
+        result.push(next)
+    }
+    return result
+}
+console.log(findTheNextGreaterNumber(arr))

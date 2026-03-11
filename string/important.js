@@ -37,3 +37,13 @@ console.log(toChangeItInString(str1));
 // Output: Rohit Singh From Acharya
 
 // Output: Rohit Singh From Acharya
+
+
+function capitalizeSentence(str){
+  return str
+    .split(" ")
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+console.log(capitalizeSentence("hello world from rohit"));

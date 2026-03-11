@@ -20,6 +20,7 @@ Object.defineProperty(student1,"age",{
 })
 
 
+
 console.log("check what i am getting ",student1)
 
 
