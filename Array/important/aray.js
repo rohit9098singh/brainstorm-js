@@ -79,7 +79,7 @@ console.log("what are we rendering at here ",newCheck(arr))
 // ✅ JSON.parse() => JSON formatted string ko wapas JavaScript object ya array me convert karta hai.
 
 
-console.log([]==[])
+console.log("ye to true he honc ahye jaha tak mujeh oata hai ",[]==[])
 // console.log([]===[])
 
 
@@ -116,7 +116,6 @@ let str="my name is rohit singh"
 function capitalizeFirstLetterWord(str){
     let resultStr=[];
     const res=str.split(" ");
-    console.log("check how it is spillted",res);
     for(let i=0;i<res.length;i++){
         const modified=res[i][0].toUpperCase() + res[i].slice(1)
         resultStr.push(modified)

@@ -24,3 +24,10 @@ function toRemoveDublicate(arr){
     }
     return newArray
 }
+
+
+const arr4=[1,2,3,4,5,5,5,5,];
+
+const newArray= [...new Set(arr4)]
+
+console.log(newArray)

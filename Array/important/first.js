@@ -4,23 +4,23 @@
 // Input: [2,3,-2,4]
 // Output: 6  // because [2,3] gives 6
 
-// function maxProduct(arr){
-//     if(arr.length===0){
-//         return 0;
-//     }
-//     let maxProduct=arr[0];
-//     for(let i=0;i<arr.length;i++){
-//         for (let j=i+1;j<arr.length;j++){
-//             let product=arr[i] * arr[j];
-//             if(product>maxProduct){
-//                 maxProduct=product;
-//             }
-//         }
-//     }
-//     return maxProduct;
-// }
+function maxProduct(arr){
+    if(arr.length===0){
+        return 0;
+    }
+    let maxProduct=arr[0];
+    for(let i=0;i<arr.length;i++){
+        for (let j=i+1;j<arr.length;j++){
+            let product=arr[i] * arr[j];
+            if(product>maxProduct){
+                maxProduct=product;
+            }
+        }
+    }
+    return maxProduct;
+}
 
-// console.log(maxProduct([2,3,-2,4]));
+console.log(maxProduct([2,3,-2,4]));
 
 
 // Input: [[1,3],[2,6],[8,10],[15,18]]
@@ -34,7 +34,6 @@ function mergeIntervals(intervals){
     intervals.sort((a,b)=>a[0]-b[0]);
     let result=[];
     let currentInterval=intervals[0];
-    console.log("first",currentInterval)    
     for (let i=1;i<intervals.length;i++){
         let nextInterval=intervals[i];
         console.log("second",nextInterval)

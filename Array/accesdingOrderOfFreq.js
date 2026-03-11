@@ -8,10 +8,11 @@ function sortInAssendingOrderOfFrq(arr) {
 
 
     let entries = Object.entries(obj)
-    console.log(entries)
     let sorted = entries.sort((a, b) => {
         return a[1] - b[1]
     })
+
+    console.log(sorted)
 
     console.log(sorted.map((e) => +e[0]))
 

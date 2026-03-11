@@ -1,5 +1,4 @@
-// Object.assign({},...null,...undefined)  // this gets typeerror because it says null is not itterable 
-
+// console.log(Object.assign({},...null,...undefined) )   // this gets typeerror because it says null is not itterable 
 console.log(Object.assign({}, null, undefined))  // this gets an empty object only because Object.assign() internally null aur undefined ko ignore kar deta hai
 
 
