@@ -1,43 +1,49 @@
-async function fetchWithRetry(url, options = {}, retries = 3, delay = 500) {
-  try {
-    const response = await fetch(url, options);
+import { useEffect, useState } from 'react'
 
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+const Usefetch = ({ url, options = {}, retries = 3, delay = 500 }) => {
+
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
+
+    const fetchData = async (retryCount, retryDelay) => {
+
+        try {
+
+            setLoading(true);
+
+            const res = await fetch(url, options);
+
+            if (!res.ok) {
+                throw new Error("There is some error");
+            }
+
+            const result = await res.json();
+            setData(result);
+
+        } catch (error) {
+
+            if (retryCount === 0) {
+                setError(error);
+                return;
+            }
+
+            await new Promise(res => setTimeout(res, retryDelay));
+
+            return fetchData(retryCount - 1, retryDelay * 2);
+
+        } finally {
+            setLoading(false);
+        }
+
     }
 
-    return await response.json();
-  } catch (error) {
-    if (retries === 0) {
-      throw error;
-    }
+    useEffect(() => {
+        fetchData(retries, delay);
+    }, [url]);
 
-    // Exponential backoff
-    await new Promise(resolve => setTimeout(resolve, delay));
+    return { data, loading, error };
 
-    return fetchWithRetry(url, options, retries - 1, delay * 2);
-  }
 }
 
-
-(async () => {
-  try {
-    const data = await fetchWithRetry(
-      'https://jsonplaceholder.typicode.com/posts',
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          title: 'Hello',
-          body: 'Retry logic test',
-          userId: 1
-        })
-      }
-    );
-    console.log('POST Response:', data);
-  } catch (err) {
-    console.error('Final Error:', err.message);
-  }
-})();
+export default Usefetch;

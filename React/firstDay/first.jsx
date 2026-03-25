@@ -1,5 +1,5 @@
 // A React functional component re-renders when its state or props change.
-// When a state update happens, Reactre-executes the component function
+// When a state update happens, React re-executes the component function
 // to generate a new Virtual DOM tree.It then compares this new Virtual DOM
 // with the previous Virtual DOM using the reconciliation (diffing) algorithm. 
 // Based on the differences, React updates only the necessary parts of the Real DOM instead of re-rendering everything.

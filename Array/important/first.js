@@ -27,28 +27,30 @@ console.log(maxProduct([2,3,-2,4]));
 // Output: [[1,6],[8,10],[15,18]]
 
 
-function mergeIntervals(intervals){
-    if(intervals.length===0){
-        return [];
-    }
-    intervals.sort((a,b)=>a[0]-b[0]);
-    let result=[];
-    let currentInterval=intervals[0];
-    for (let i=1;i<intervals.length;i++){
-        let nextInterval=intervals[i];
-        console.log("second",nextInterval)
-        if(currentInterval[1]>=nextInterval[0]){
-            currentInterval[1]=Math.max(currentInterval[1],nextInterval[1]);
-        }else{
-            result.push(currentInterval);
-            currentInterval=nextInterval;
-        }
-    }
-    result.push(currentInterval);   
-    console.log(result)
-}
+// function mergeIntervals(intervals){
+//     if(intervals.length===0){
+//         return [];
+//     }
+//     intervals.sort((a,b)=>a[0]-b[0]);
+//     let result=[];
+//     let currentInterval=intervals[0];
+//     for (let i=1;i<intervals.length;i++){
+//         let nextInterval=intervals[i];
+//         console.log("second",nextInterval)
+//         if(currentInterval[1]>=nextInterval[0]){
+//             currentInterval[1]=Math.max(currentInterval[1],nextInterval[1]);
+//         }else{
+//             result.push(currentInterval);
+//             currentInterval=nextInterval;
+//         }
+//     }
+//     result.push(currentInterval);   
+//     console.log(result)
+// }
 
-console.log(mergeIntervals([[1,3],[2,6],[8,10],[15,18]]));
+// console.log(mergeIntervals([[1,3],[2,6],[8,10],[15,18]]));
+
+
 
 // Input: ["i","love","coding","i","love","js"], k = 2
 // Output: ["i","love"]
@@ -59,6 +61,7 @@ function topFrequentWords(words, k) {
     for (let word of words) {
         seen[word] = (seen[word] || 0) + 1;
     }
+    console.log(seen)
     // Step 2: Convert to array and sort by frequency descending
     let sortedWords = Object.keys(seen).sort((a, b) => seen[b] - seen[a]);
     console.log("check for the values what is getting here",sortedWords)
@@ -78,6 +81,7 @@ console.log(topFrequentWords(["i","love","coding","i","love","js"], 2));
 function rotateWithSome(arr, key) {
     let res = [];
     let noOfItemsToRotate = key % arr.length;
+    console.log("how many items are we geting",noOfItemsToRotate)
     console.log("this",noOfItemsToRotate)
     let toRotateValue = arr.slice(-noOfItemsToRotate)
     console.log("kuch",toRotateValue)

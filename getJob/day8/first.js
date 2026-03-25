@@ -7,7 +7,8 @@ console.log(x[y])
 
 // second question at here 
 const a = { name: "ram", age: 21, city: "oddisha" }
-let b = { ...a, name: "rahul" }
+let b = { ...a, name: "rahul" } // { name: "rahul", age: 21, city: "oddisha" }
+
 const { name, ...xyz } = a;
 console.log(xyz, b)
 
@@ -22,8 +23,8 @@ console.log(`this is the name at here ${name2}`)
 // 👉 Cleaner and easier to read
 
 
-// dev-deppendecy are thoes dependecy that are needed during the production that is =>express ,mongoose
-// dependecny are thoes that are needed during the development time => nodemon typescript jest webpake
+// dev-deppendecy Ye sirf development / build / testing ke time chahiye =>nodemon ,typescript ,eslint
+// dependecny Ye production me required hoti hain => express mongoose axios
 
 
 // Dynamic routing means:

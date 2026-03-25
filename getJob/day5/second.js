@@ -31,5 +31,5 @@ console.log(a)
 let numVal=2;
 let b=!--numVal;
 let c=!--numVal;
-console.log(b,c)  // false true
+console.log(b,c);  // false true
 

@@ -1,4 +1,5 @@
 const arr2=["rohiiit","rohit"]
+
 function betterVersion(arr){
    return   arr[0].includes(arr[1])
 }

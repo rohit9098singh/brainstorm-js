@@ -11,7 +11,6 @@
 //     }
 // }
 
-// console.log(rightAngledname("rojit"))
 
 // Left-Aligned Triangle
 // function rightTriangle(n) {
@@ -32,12 +31,14 @@
 // rightAlignedTriangle(5);
 
 //Pyramid (Centered)
-// function pyrimid(n){
-//   for(let row=0;row<n;row++){
-//        console.log(" ".repeat(n-row-1) + "*".repeat(2*row+1))
-//   }
-// }
-// pyrimid(5)
+function pyrimid(n){
+  for(let row=0;row<n;row++){
+       console.log(" ".repeat(n-row-1) + "*".repeat(2*row+1))
+  }
+}
+pyrimid(5)
+
+
 
 
 // Inverted Pyramid

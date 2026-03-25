@@ -43,9 +43,9 @@ let xyz={
 
 const {name,...pqr}=abc;
 
-console.log(name,pqr)
+console.log("first dekh",name,pqr)
 
-console.log(pqr,xyz)
+console.log("second dekh",pqr,xyz)
 
 // CDN = Content Delivery Network
 

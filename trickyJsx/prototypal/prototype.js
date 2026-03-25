@@ -15,7 +15,7 @@ let worker = {
 
 
 worker.__proto__ = company2; //worker object inherits company object
-console.log(worker);
+console.log("worker ke pas kya kya hai ",worker);
 worker.pay();
 
 

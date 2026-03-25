@@ -5,27 +5,24 @@ export default function App() {
   const modalRef = useRef(null);
 
   useEffect(() => {
+
+  if (!isOpen) return;
+
   const handleOutsideClick = (e) => {
     if (modalRef.current && !modalRef.current.contains(e.target)) {
       setIsOpen(false);
     }
   };
 
-  if (isOpen) {
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    // 🔒 disable background scroll
-    document.body.style.overflow = "hidden";
-  }
+  document.addEventListener("mousedown", handleOutsideClick);
+  document.body.style.overflow = "hidden";
 
   return () => {
     document.removeEventListener("mousedown", handleOutsideClick);
-
-    // 🔓 enable scroll back
     document.body.style.overflow = "auto";
   };
-}, [isOpen]);
 
+}, [isOpen]);
 
   return (
     <>
@@ -48,6 +45,8 @@ export default function App() {
     </>
   );
 }
+
+
 
 
 

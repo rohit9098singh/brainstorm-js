@@ -17,7 +17,7 @@ console.log(newArray2)
 
 const arr=[1,2,3,4];
 const newA=arr.reduce((num)=>num =2)
-console.log(newA)
+console.log("muh pe dalke",newA)
 
 
 function findTheLongestString(str){

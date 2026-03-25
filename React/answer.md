@@ -282,8 +282,9 @@ The `key` prop helps React identify which items in a list have changed, been add
 
 ### ❓ Why should keys be stable and unique?
 
-- **Stable** - Shouldn't change between renders
-- **Unique** - No two siblings should have the same key
+React list ko update karte time key ke basis par items ko identify karta hai.
+Agar tum index ko key bana dete ho, aur list me beech ka item delete ya insert ho jaye, to baaki items ke index shift ho jate hain.
+React ko lagega ki items change ho gaye, jabki actually sirf position change hui hoti hai.
 
 **Example:**
 ```javascript
@@ -882,6 +883,30 @@ If count is 0, click, then count becomes 5, timeout still logs **0**!
 
 **Fix:** Use `useRef` or functional update.
 
+import { useState, useRef, useEffect } from "react";
+
+function Component() {
+  const [count, setCount] = useState(0);
+  const countRef = useRef(count);
+
+  // keep ref updated with latest count
+  useEffect(() => {
+    countRef.current = count;
+  }, [count]);
+
+  const handleClick = () => {
+    setTimeout(() => {
+      console.log(countRef.current); // always latest value
+    }, 3000);
+  };
+
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      {count}
+    </button>
+  );
+}
+
 ---
 
 ### ❓ Output when using state inside `setTimeout`
@@ -1332,6 +1357,16 @@ const [user, setUser] = useState({ name: 'Rohit', age: 25 });
 - **Error boundaries**
 
 **Why it matters:** Makes React apps faster and more responsive!
+
+
+**React direct browser events use nahi karta**.
+**Instead React Synthetic Events use karta hai**.
+
+### Synthetic Event ek wrapper object hota hai jo native browser event ko wrap karta hai taaki:
+### cross-browser compatibility mile
+### same API sab browsers me work kare
+
+erformance improve ho
 
 ---
 

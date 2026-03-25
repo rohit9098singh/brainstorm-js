@@ -9,7 +9,8 @@ console.log(idx2);//-1
 // searchElement → कौन-सा element खोजना है।
 // fromIndex → किस index से search शुरू करनी है। (optional)
 const arr=[1,2,3,4]
-console.log(arr.includes(4,-1)); // false
+const res3=arr.includes(6,-1); // false\
+console.log("check kar res3 kya aayea",res3)
 
 // arr.length = 4
 // fromIndex = -1

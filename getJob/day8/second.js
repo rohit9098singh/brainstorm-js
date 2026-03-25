@@ -148,18 +148,18 @@ console.log(findTheDuplicateElement(arr3));
 let str3 = "My name is Baadhshsha sh"
 const resultIndex = str3.indexOf("sh");
 if (resultIndex !== -1) {
-    console.log(str3.toLowerCase().includes("sh"), resultIndex)
+    console.log("what are we trying to print at here can u let me know ",str3.toLowerCase().includes("sh"), resultIndex)
 
 }
 
 // now you need to check that how many times sh is appearing at there ok
 function countOccurrences(str, target) {
-    console.log(str.toLowerCase().split(target).length)
+    console.log("what is this getting spilted to",str.toLowerCase().split(target))
     return str.toLowerCase().split(target).length - 1;
 
 }
 
-let newstr = "My name is Baadhshsha sh";
+let newstr = "My name is Baadhsha sh";
 console.log(countOccurrences(newstr, "sh"));
 
 // check for the function below what it will print out there 
