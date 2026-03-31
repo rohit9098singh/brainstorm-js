@@ -47,6 +47,12 @@ function swapTwoInteger(a,b){
     a = a - b; // 3-1=2
     return { a, b };
 
+    // 4th way
+    a=a ^b;
+    b= a^b;
+    a=a^b;
+
+
 }
 console.log(swapTwoInteger(1,2))
 
@@ -115,17 +121,26 @@ abcd()
 
 let str="my name is rohit singh"
 
+// function capitalizeFirstLetterWord(str){
+//     let resultStr=[];
+//     const res=str.split(" ");
+//     for(let i=0;i<res.length;i++){
+//         const modified=res[i][0].toUpperCase() + res[i].slice(1)
+//         resultStr.push(modified)
+//     }
+//    return resultStr.join(" ");
+// }
+
 function capitalizeFirstLetterWord(str){
-    let resultStr=[];
-    const res=str.split(" ");
-    for(let i=0;i<res.length;i++){
-        const modified=res[i][0].toUpperCase() + res[i].slice(1)
-        resultStr.push(modified)
+    let words=str.split(" ");
+    let result=[];
+    for(let i=0;i<words.length;i++){
+          result.push(words[i][0].toUpperCase() + words[i].slice(1));
     }
-   return resultStr.join(" ");
+    return result.join(" ")
 }
 
-console.log(capitalizeFirstLetterWord(str))
+console.log("checking capitalization",capitalizeFirstLetterWord(str))
  
 
 // if you just have to capitialize the first leteer of the word 

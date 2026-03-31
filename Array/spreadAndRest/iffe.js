@@ -10,13 +10,13 @@ console.log(result);
 
 
 // ================================ question 3 ================================
-const counter = (function(){
-  let count = 0;
-  return {
-    increment: () => ++count,
-    decrement: () => --count
-  }
-})();
+// const counter = (function(){
+//   let count = 0;
+//   return {
+//     increment: () => ++count,
+//     decrement: () => --count
+//   }
+// })();
 console.log(counter.increment()); 
 console.log(counter.increment()); 
 console.log(counter.decrement());

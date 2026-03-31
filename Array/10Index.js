@@ -1,17 +1,17 @@
 const arr=[1,2,8,9,11,5,6,7,8]
 
-function getIndexOfSumTen(arr){
-    const newArray=[];
-    for(let i=0;i<arr.length;i++){
-        for(j=i+1;j<arr.length;j++){
-           if(arr[i] + arr[j] === 10){
-               newArray.push([i,j])
-           }
-        }
-    }
-    return newArray;
+// function getIndexOfSumTen(arr){
+//     const newArray=[];
+//     for(let i=0;i<arr.length;i++){
+//         for(j=i+1;j<arr.length;j++){
+//            if(arr[i] + arr[j] === 10){
+//                newArray.push([i,j])
+//            }
+//         }
+//     }
+//     return newArray;
     
-}
+// }
 
 console.log(getIndexOfSumTen(arr))
 

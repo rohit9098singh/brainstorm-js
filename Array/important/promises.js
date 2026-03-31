@@ -209,7 +209,7 @@
 //     console.log('E:', val);
 //   });
 
-// // 15
+// 15
 
 // function makeTask() {
 //   return new Promise((resolve, reject) => {
@@ -313,4 +313,3 @@ p8.then(v => {
 // executer-end
 // syncend
 // Result
-//

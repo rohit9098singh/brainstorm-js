@@ -4,6 +4,19 @@
 // Input: [2,3,-2,4]
 // Output: 6  // because [2,3] gives 6
 
+ function maxProduct1(arr){
+    let max=arr[0];
+    for(let i=0;i<arr.length;i++){
+        let product=1;
+        for(let j=i;j<arr.length;j++){
+            product *= arr[j];
+            max=Math.max(max,product)
+        }
+    }
+    return max;
+ }
+console.log(maxProduct1([2,3,-2,4]));
+
 function maxProduct(arr){
     if(arr.length===0){
         return 0;
