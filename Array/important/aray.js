@@ -3,6 +3,7 @@ const arr2=["rohiiit","rohit"]
 function betterVersion(arr){
    return   arr[0].includes(arr[1])
 }
+
 console.log(betterVersion(arr2))
 
 // seperate one did it number in one array tw digit number in another arrray and three digit in another array
