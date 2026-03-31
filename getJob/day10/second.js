@@ -14,6 +14,13 @@ if (a == 1 && a == 2 && a == 3) {
     console.log("yes")
 }
 
+// a ek object hai
+// 👉 Jab tum a == 1 likhte ho, JavaScript internally bolta hai:
+
+// “Object ko number me convert karo”
+
+// Aur uske liye valueOf() call hota hai
+
 
 // third question 
 

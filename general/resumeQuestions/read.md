@@ -24,7 +24,7 @@ Ye client ko allow karta hai exact data request karne ke liye.
 GraphQL is a query language for APIs that allows the client to request exactly the data it needs. Unlike REST APIs where multiple endpoints may be required, GraphQL uses a single endpoint and provides flexible queries, reducing over-fetching and under-fetching of data.
 
 Q) how nodejs handle asyncronus calls
-Node.js is single-threaded but uses an event-driven, non-blocking architecture. When an asynchronous task like a database query or file operation is encountered, Node.js delegates it to the libuv thread pool. The main thread continues executing other tasks. Once the asynchronous operation is completed, the callback is placed in the callback queue, and the event loop pushes it to the call stack when it becomes available.
+Node.js is single-threaded but uses an event-driven, non-blocking architecture. When an asynchronous task like a database query or file operation is encountered, Node.js delegates heavy operations to worker threads through libuv,. The main thread continues executing other tasks. Once the asynchronous operation is completed, the callback is placed in the callback queue, and the event loop pushes it to the call stack when it becomes available.
 
 Q) what is middleare ? 
 Middleware ek function hota hai jo request aur response ke beech me execute hota hai.

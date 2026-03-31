@@ -4,6 +4,8 @@
 // for this scean proxy comes into the picture that is kind of
 // middleware for objects
 // 🔹 Object
+
+// agar sahi se samjhna hai to piyush garg ka dekh
 let obj = {
     name: "tcm",
     age: 29,

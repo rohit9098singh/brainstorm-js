@@ -29,14 +29,20 @@ function checkHi(str2) {
 console.log(checkHi(str2)); // true (because "rohit" has "hi")
 
 
-let str = "my name is rohit hi";
-
 function countHi(str) {
-  return (str.match(/hi/g) || []).length;
+  let count = 0;
+
+  for (let i = 0; i < str.length - 1; i++) {
+    if (str[i] === 'h' && str[i + 1] === 'i') {
+      count++;
+    }
+  }
+
+  return count;
 }
 
-console.log("what is the out put for this check at here", countHi(str)); // 2
-
+let str = "my name is rohit hi";
+console.log(countHi(str)); // 2
 
 
 const str1 = "Sk";

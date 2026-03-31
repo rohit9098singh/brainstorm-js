@@ -1,5 +1,4 @@
-
- //2) condition where same number 99 present three times;
+//2) condition where same number 99 present three times;
 
 // function findSecondLargest2(arr) {
 //   arr.sort((a, b) => {

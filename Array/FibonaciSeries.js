@@ -1,52 +1,25 @@
-// const fibonacci=function fib(n){
-//     if(n==0 || n==1){
-//         return 1
-//     }
-//     else{
-//         return fib(n-1) + fib(n-2);
-//     }
-// }
-
-const fibonacci2=function fib(n){
-    if(n==0 || n==1){
-      return 1
-    }
-    else{
-      return fib(n-1) + fib (n-2)
-    }
-}
-
-
-let num=10;
-console.log("fibonacci series")
-for(let i=0;i<num;i++){
-    console.log(fibonacci(i))
-}
-
-
-const factorial=function fact(n){
- 
-  if (n === 0 || n === 1) {
+function factorial(num) {
+  if (num === 0 || num === 1) {
     return 1;
   }
-
-  return n * factorial(n - 1);
+  return num * factorial(num - 1)
 }
 
-// Example
-console.log(factorial(5)); // Output: 120
+console.log(factorial(5))
 
 
-const fibonacci=function fib(n){
-  if(n===0 || n===1){
-        return 1 
+function fibonacci(num) {
+  if (num === 0 || num === 1) {
+    return 1
   }
-  else{
-   return  fib(n-1) + fib(n-2)
+  else {
+    return fibonacci(num - 1) + fibonacci(num - 2)
+
   }
 }
 
-let num2=10;
-for(let i=0;i<num2;i++){
+let n = 10;
+
+for (let i = 0; i < n; i++) {
   console.log(fibonacci(i))
 }

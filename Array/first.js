@@ -16,16 +16,29 @@
 // console.log("max value",max)
 // console.log("min value",min)
 
-// var a = 1;
-// function data() {
-// if(!a) {
-//  var a = 10;
-// }
-//  console.log(a);
-// }
-// // 174 Interview questions & Answers 68
-// data();
-// console.log(a);
+var a = 1;
+function data() {
+if(!a) {
+ var a = 10;
+}
+ console.log(a);
+}
+// 174 Interview questions & Answers 68
+data();
+console.log(a);
+
+
+let a = 20;
+
+function check() {
+    if (!a) {
+        a = 40;
+    }
+    console.log(a);
+}
+
+check();
+console.log(a);
 
 
 // let findTheMaximun=(arr)=>{

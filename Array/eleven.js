@@ -1,11 +1,21 @@
-function interCetion(arr1, arr2) {
-    let merged = [];
-    for (let i = 0; i < arr1.length; i++) {
-        if (arr2.includes(arr1[i]) && !merged.includes(arr1[i])) {
-            merged.push(arr1[i]);
-        }
+// function interCetion(arr1, arr2) {
+//     let merged = [];
+//     for (let i = 0; i < arr1.length; i++) {
+//         if (arr2.includes(arr1[i]) && !merged.includes(arr1[i])) {
+//             merged.push(arr1[i]);
+//         }
+//     }
+//     return merged;
+// }
+
+function interCetion(arr1,arr2){
+  let merged=[];
+  for(let i=0;i<arr1.length;i++){
+    if(arr2.includes(arr1[i]) && !merged.includes(arr1[i])){
+          merged.push(arr1[i])
     }
-    return merged;
+  }
+  return merged
 }
 console.log(interCetion([1,2,3,4],[2,3,4,5])); 
 // [2,3,4]
