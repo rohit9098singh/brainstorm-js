@@ -13,16 +13,16 @@ let payload = {
 
 function getKeys(obj) {
     for (let key in obj) {
-        if (typeof obj[key] === "object") {
-            getKeys(obj[key])
-        }
-        console.log(key)
-        // for only string walla keys
-        // if(typeof obj[key] === "object"){
+        // if (typeof obj[key] === "object") {
         //     getKeys(obj[key])
-        // }else{
-        //     console.log(key)
         // }
+        // console.log(key)
+        // for only string walla keys
+        if(typeof obj[key] === "object"){
+            getKeys(obj[key])
+        }else{
+            console.log(key)
+        }
     }
 }
 
@@ -77,7 +77,7 @@ function doSomething(){
     try {
         throw new Error("errr")
     } catch (error) {
-        return "catch"
+        return "chup ter ma "
     }finally{
         return "finnaly"
     }

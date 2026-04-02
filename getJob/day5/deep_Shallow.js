@@ -47,3 +47,10 @@ function deepClone(obj){
   }
   return newObj;
 }
+
+
+
+// Idempotency ensures that making the same request multiple times results
+//  in the same effect as making it once. It is naturally supported in GET,
+//   PUT, and DELETE methods, while POST requires an idempotency key to
+//    prevent duplicate resource creation.

@@ -114,7 +114,7 @@ function one(a=5,b=7){
     console.log(a+b)
 }
 
-one(undefined,20);//Agar parameter ka value undefined hai aur uske liye default value defined hai → JS default value use karega.
+one(null,20);//Agar parameter ka value undefined hai aur uske liye default value defined hai → JS default value use karega.
 
 function two(a=2,b){
     console.log("here aab dekh ()",a+b);//Default parameter sirf tab apply hota hai jab argument undefined ho.

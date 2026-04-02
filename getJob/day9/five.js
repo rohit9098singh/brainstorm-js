@@ -35,7 +35,7 @@ const newArr=[1,2,3,4,5,6];
 const res=newArr.flatMap((item)=>{
    return  item%2===0 ? item * item : []
 })
-console.log(res)
+console.log("ye skya ",res)
 
 
 const num="";

@@ -12,7 +12,7 @@ console.log(obj1[obj2])
 
 
 // console.log([123] === [123])
-// console.log([] == []) // "" == "" 0== 0
+console.log([] == []) // "" == "" 0== 0
 
 
 // const myobj=Object.create({name:"rohit"});

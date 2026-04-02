@@ -29,7 +29,7 @@ function check(){
   return 100;
 }
 var check =10;
-console.log("fucntio chala na chaeye",check())
+// console.log("fucntio chala na chaeye",check())
 
 // “In JavaScript, function declarations can be overridden by variable assignments during execution,
 //  leading to TypeErrors if the variable is later called as a function
