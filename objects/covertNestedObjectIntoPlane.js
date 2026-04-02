@@ -3,16 +3,16 @@ function convertToNestedObjectIterative(flatObj) {
 
     for (const key in flatObj) {
         const keys = key.split("_")
-        console.log("check for the result",keys)
         let current = result;
 
         keys.forEach((k, i) => {
             if (i === keys.length - 1) {
                 current[k] = flatObj[key];
-                console.log("what appears at here ",current[k])
             } else {
-                current[k] = current[k] || {};
-                current = current[k];
+               if (!current[k]) {
+                current[k] = {};
+            }
+            current = current[k];
             }
         });
     }
