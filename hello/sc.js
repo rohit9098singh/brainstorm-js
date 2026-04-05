@@ -36,3 +36,11 @@ const fn = outer();
 
 fn(); // Current count: 1
 fn(); // Current count: 2
+
+
+
+async function a() { return 1; }
+async function b() { return Promise.resolve(2); }
+
+a().then(console.log);
+b().then(console.log);

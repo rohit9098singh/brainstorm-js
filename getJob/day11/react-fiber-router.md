@@ -22,3 +22,13 @@ Suspense sirf lazy loading ke liye nahi, balki data fetching, SSR streaming (lik
 ✅ 4. Hydration 
 
 ans => it is the process where the react attches event listener and interanl logic to the server rendered html 
+
+✅ 5. React Routing
+
+React doesn't have build in routing capablities
+
+insted the React ecosystem relies on libraries like React router which is the most popular routing solution
+
+React Router Provides components like BrowerRouter ,Route,switch ,link and Navlink to create navigation structure in single page application without page reloads
+
+react routers works by rendering components conditionally based on the url path. it uses the history Api to manipulate the brower history stack and handle navigation without full page load

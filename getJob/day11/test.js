@@ -37,3 +37,33 @@ function App(){
 export default App
 // JSX ke {} ke andar sirf expressions allowed 
 // hote hain,statements (like if) allowed nahi hote.
+
+
+// protypal inheritance normal inheritance se kitna different hai 
+
+// Prototypal inheritance in JavaScript is a mechanism where objects inherit directly 
+// from other objects via the prototype chain. Unlike classical
+// inheritance, which is based on classes, JavaScript uses 
+// object-to-object inheritance, making it more flexible and dynamic.
+
+
+// usEffect 
+useEffect(() => {
+  const height = ref.current.offsetHeight;
+  setHeight(height);
+}, []);
+
+// 👉 Issue:
+// UI pehle render ho gaya
+// phir height calculate hui
+// phir UI update → flicker dikhega
+
+// useLayoutEffect
+useLayoutEffect(() => {
+  const height = ref.current.offsetHeight;
+  setHeight(height);
+}, []);
+
+// 👉 Benefit:
+// paint se pehle calculation ho jata hai
+// user ko smooth UI (no flicker) dikhta hai

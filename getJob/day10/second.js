@@ -77,3 +77,16 @@ console.log([s1].toString());   // 👉 "this is key"
 // 🔹 Accessing values
 console.log(obj.s1);                 // 👉 "this is value"
 console.log(obj["this is key"]);     // 👉 "this is also value"
+
+
+
+console.log(typeof null);
+console.log(null instanceof Object);     // false
+console.log(Object instanceof Object);  // true
+
+// JavaScript check karega:
+
+// kya null ka prototype chain hai? ❌
+// nahi hai → to match hi nahi hoga
+
+// 👉 result = false
