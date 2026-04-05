@@ -13,12 +13,20 @@
 
 
 
+// function replaceKeyWithValueAndValueWithKey(obj){
+//   let newObj={};
+//   for(let key in obj){
+//       newObj[obj[key]]=key
+//   }
+//   return newObj
+// }
+
 function replaceKeyWithValueAndValueWithKey(obj){
-  let newObj={};
+  let inverted={}
   for(let key in obj){
-      newObj[obj[key]]=key
+    inverted[obj[key]]=key
   }
-  return newObj
+  return inverted
 }
 
 let obj = { name: "Rohit", role: "student" };

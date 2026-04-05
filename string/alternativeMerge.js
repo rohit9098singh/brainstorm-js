@@ -31,6 +31,13 @@ let str2 = "prjapati";
 console.log(mergeAlternately(str1, str2));
 
 
-import React, { useEffect, useState } from 'react'
-
+function check(str1,str2){
+  let res="";
+  let i=0,j=0;
+  while(i<str1.length || j<str2.length){
+    if(i<str1.length ) res+=str1[i++];
+    if(j<str2.length) res+=str2[j++]
+  }
+  return res
+}
 
