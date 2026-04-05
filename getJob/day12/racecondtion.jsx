@@ -68,7 +68,7 @@ function LikeButton() {
 
 
 
-// What is XSS and how do you prevent it in a React app? by using axios insted of fetch right
+// What is XSS and how do you prevent it in a React app? 
 // XSS is a security vulnerability where malicious scripts are injected into a webpage and executed in the user's browser. 
 // In React, we prevent XSS by relying on React’s automatic escaping of JSX, avoiding dangerouslySetInnerHTML,
 //  and sanitizing any dynamic HTML content using libraries like DOMPurify.
